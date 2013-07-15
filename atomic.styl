@@ -1,0 +1,63 @@
+/* dimensions of elements */
+size = 200px
+atoms = (size/3.236067978)
+orbit = (size/14)
+font = size/7
+
+/* colors */
+border = #2ECC71
+inner = #27AE60
+
+.atomic
+  border: orbit solid border
+  border-radius: size
+  box-sizing: border-box
+  color: white
+  counter-reset: atomic
+  display: table-cell
+  font-family: Montserrat,Helvetica
+  height: size
+  position: relative
+  vertical-align: middle
+  width: size
+
+  li, summary
+    background-color: inner
+    border-radius: atoms
+    height: atoms
+    width: atoms
+
+  summary
+    margin: 0 auto
+    text-align: center
+
+  output
+    font-size: font
+    display: inline-block
+    margin-top: 0.5em
+
+  sup
+    font-size: (font/2)
+
+  ol
+    list-style: none
+    position: absolute
+
+  li
+    background-color: border
+    position: relative
+
+    &:before
+      content: counter(atomic)
+      counter-increment: atomic
+      font-size: 18px
+      left: 50%
+      margin: -10px 0 0 -5px
+      position: absolute
+      top: 50%
+
+    &:hover a
+      display: block
+
+  a
+    display: none

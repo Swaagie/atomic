@@ -1,0 +1,57 @@
+/* dimensions of elements */
+/* colors */
+.atomic {
+  border: 14.285714285714286px solid #2ecc71;
+  border-radius: 200px;
+  box-sizing: border-box;
+  color: #fff;
+  counter-reset: atomic;
+  display: table-cell;
+  font-family: Montserrat, Helvetica;
+  height: 200px;
+  position: relative;
+  vertical-align: middle;
+  width: 200px;
+}
+.atomic li,
+.atomic summary {
+  background-color: #27ae60;
+  border-radius: 61.80339886543632px;
+  height: 61.80339886543632px;
+  width: 61.80339886543632px;
+}
+.atomic summary {
+  margin: 0 auto;
+  text-align: center;
+}
+.atomic output {
+  font-size: 28.571428571428573px;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+.atomic sup {
+  font-size: 14.285714285714286px;
+}
+.atomic ol {
+  list-style: none;
+  position: absolute;
+}
+.atomic li {
+  background-color: #2ecc71;
+  position: relative;
+}
+.atomic li:before {
+  content: counter(atomic);
+  counter-increment: atomic;
+  font-size: 18px;
+  left: 50%;
+  margin: -10px 0 0 -5px;
+  position: absolute;
+  top: 50%;
+}
+.atomic li:hover a {
+  display: block;
+}
+.atomic a {
+  display: none;
+}
