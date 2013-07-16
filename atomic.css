@@ -1,28 +1,195 @@
 /* dimensions of elements */
 /* colors */
 .atomic {
-  border: 14.285714285714286px solid #2ecc71;
-  border-radius: 200px;
-  box-sizing: border-box;
   color: #fff;
   counter-reset: atomic;
-  display: table-cell;
   font-family: Montserrat, Helvetica;
-  height: 200px;
+  height: 228.57142857142858px;
   position: relative;
-  vertical-align: middle;
+  width: 228.57142857142858px;
+}
+.atomic[data-steps="2"] li:nth-child(1) {
+  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+}
+.atomic[data-steps="2"] li:nth-child(2) {
+  -webkit-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+}
+.atomic[data-steps="3"] li:nth-child(1) {
+  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+}
+.atomic[data-steps="3"] li:nth-child(2) {
+  -webkit-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  -moz-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  -ms-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  -o-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+}
+.atomic[data-steps="3"] li:nth-child(3) {
+  -webkit-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  -moz-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  -ms-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  -o-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+}
+.atomic[data-steps="4"] li:nth-child(1) {
+  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+}
+.atomic[data-steps="4"] li:nth-child(2) {
+  -webkit-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
+  -moz-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
+  -ms-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
+  -o-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
+  transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
+}
+.atomic[data-steps="4"] li:nth-child(3) {
+  -webkit-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+}
+.atomic[data-steps="4"] li:nth-child(4) {
+  -webkit-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
+  -moz-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
+  -ms-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
+  -o-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
+  transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
+}
+.atomic[data-steps="5"] li:nth-child(1) {
+  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+}
+.atomic[data-steps="5"] li:nth-child(2) {
+  -webkit-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
+  -moz-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
+  -ms-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
+  -o-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
+  transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
+}
+.atomic[data-steps="5"] li:nth-child(3) {
+  -webkit-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
+  -moz-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
+  -ms-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
+  -o-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
+  transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
+}
+.atomic[data-steps="5"] li:nth-child(4) {
+  -webkit-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
+  -moz-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
+  -ms-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
+  -o-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
+  transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
+}
+.atomic[data-steps="5"] li:nth-child(5) {
+  -webkit-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
+  -moz-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
+  -ms-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
+  -o-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
+  transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
+}
+.atomic[data-steps="6"] li:nth-child(1) {
+  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+}
+.atomic[data-steps="6"] li:nth-child(2) {
+  -webkit-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
+  -moz-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
+  -ms-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
+  -o-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
+  transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
+}
+.atomic[data-steps="6"] li:nth-child(3) {
+  -webkit-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  -moz-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  -ms-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  -o-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+  transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+}
+.atomic[data-steps="6"] li:nth-child(4) {
+  -webkit-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+  transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+}
+.atomic[data-steps="6"] li:nth-child(5) {
+  -webkit-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  -moz-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  -ms-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  -o-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+  transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+}
+.atomic[data-steps="6"] li:nth-child(6) {
+  -webkit-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
+  -moz-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
+  -ms-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
+  -o-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
+  transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
+}
+.atomic ol {
+  border-radius: 200px;
+  border: 14.285714285714286px solid #2ecc71;
+  box-sizing: content-box;
+  height: 200px;
+  list-style: none;
+  padding: 0;
+  position: relative;
   width: 200px;
 }
 .atomic li,
 .atomic summary {
-  background-color: #27ae60;
+  background-color: #16a085;
   border-radius: 61.80339886543632px;
   height: 61.80339886543632px;
   width: 61.80339886543632px;
 }
+.atomic li {
+  background-color: #2ecc71;
+  left: 50%;
+  margin: -30.90169943271816px;
+  position: absolute;
+  top: 50%;
+}
+.atomic li:before {
+  content: counter(atomic);
+  counter-increment: atomic;
+  font-size: 20px;
+  left: 50%;
+  margin: -12px 0 0 -6px;
+  position: absolute;
+  top: 50%;
+}
+.atomic li:hover a {
+  display: block;
+}
 .atomic summary {
-  margin: 0 auto;
+  left: 50%;
+  margin: -30.90169943271816px;
+  position: absolute;
   text-align: center;
+  top: 50%;
 }
 .atomic output {
   font-size: 28.571428571428573px;
@@ -31,26 +198,6 @@
 }
 .atomic sup {
   font-size: 14.285714285714286px;
-}
-.atomic ol {
-  list-style: none;
-  position: absolute;
-}
-.atomic li {
-  background-color: #2ecc71;
-  position: relative;
-}
-.atomic li:before {
-  content: counter(atomic);
-  counter-increment: atomic;
-  font-size: 18px;
-  left: 50%;
-  margin: -10px 0 0 -5px;
-  position: absolute;
-  top: 50%;
-}
-.atomic li:hover a {
-  display: block;
 }
 .atomic a {
   display: none;

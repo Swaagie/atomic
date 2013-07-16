@@ -6,20 +6,41 @@ font = size/7
 
 /* colors */
 border = #2ECC71
-inner = #27AE60
+inner = #16A085
+
+transform()
+  -webkit-transform arguments
+  -moz-transform arguments
+  -ms-transform arguments
+  -o-transform arguments
+  transform arguments
 
 .atomic
-  border: orbit solid border
-  border-radius: size
-  box-sizing: border-box
   color: white
   counter-reset: atomic
-  display: table-cell
   font-family: Montserrat,Helvetica
-  height: size
+  height: size + 2*orbit
   position: relative
-  vertical-align: middle
-  width: size
+  width: size + 2*orbit
+
+  for i in (2..6)
+    &[data-steps={'"' + i + '"'}]
+      chunk = (360/i)
+
+      for step in (1..i)
+        li:nth-child({step})
+          p = (chunk*step) - (90 + chunk)deg
+          transform: rotate(p) translate(size/2+orbit/2) rotate(-1*p);
+
+  ol
+    border-radius: size
+    border: orbit solid border
+    box-sizing: content-box
+    height: size
+    list-style: none
+    padding: 0
+    position: relative
+    width: size
 
   li, summary
     background-color: inner
@@ -27,9 +48,31 @@ inner = #27AE60
     height: atoms
     width: atoms
 
+  li
+    background-color: border
+    left: 50%
+    margin: (atoms/-2)
+    position: absolute
+    top: 50%
+
+    &:before
+      content: counter(atomic)
+      counter-increment: atomic
+      font-size: 20px
+      left: 50%
+      margin: -12px 0 0 -6px
+      position: absolute
+      top: 50%
+
+    &:hover a
+      display: block
+
   summary
-    margin: 0 auto
+    left: 50%
+    margin: (atoms/-2)
+    position: absolute
     text-align: center
+    top: 50%
 
   output
     font-size: font
@@ -38,26 +81,6 @@ inner = #27AE60
 
   sup
     font-size: (font/2)
-
-  ol
-    list-style: none
-    position: absolute
-
-  li
-    background-color: border
-    position: relative
-
-    &:before
-      content: counter(atomic)
-      counter-increment: atomic
-      font-size: 18px
-      left: 50%
-      margin: -10px 0 0 -5px
-      position: absolute
-      top: 50%
-
-    &:hover a
-      display: block
 
   a
     display: none
