@@ -1,8 +1,8 @@
 /* dimensions of elements */
 size = 200px
-atoms = (size/3.236067978)
-orbit = (size/14)
-font = size/7
+electron = round(size / 3.236067978)
+orbital = round(size / 14)
+font = round(size / 7)
 
 /* colors */
 border = #2ECC71
@@ -15,72 +15,116 @@ transform()
   -o-transform arguments
   transform arguments
 
+/* move circles along the edge */
+divide(a,b)
+  p = (a * b) - (90 + a)deg
+  display: block
+  transform: rotate(p) translate(size / 2 + orbital / 2) rotate(-1 * p)
+
 .atomic
-  color: white
+  color: inner
   counter-reset: atomic
   font-family: Montserrat,Helvetica
-  height: size + 2*orbit
+  height: size + 2 * orbital
   position: relative
-  width: size + 2*orbit
+  width: size + 2 * orbital
 
-  for i in (2..6)
-    &[data-steps={'"' + i + '"'}]
-      chunk = (360/i)
+  /* this will hide electrons if there is only one step */
+  li
+    display: none
 
-      for step in (1..i)
+  /* calculate the positions for each atom */
+  &[data-n] li:nth-child(1)
+    divide(180, 1)
+
+  for n in 2..6
+    chunk = (360 / n)
+
+    &[data-n={'"' + n + '"'}]
+      for step in (2..n)
         li:nth-child({step})
-          p = (chunk*step) - (90 + chunk)deg
-          transform: rotate(p) translate(size/2+orbit/2) rotate(-1*p);
+          divide(chunk, step)
+
+  for i in 1..6
+    &[data-i={'"' + i + '"'}]
+      previous = i - 1
+      li:nth-child(-n+{previous}):before
+        content: '✓'
+
+      li:nth-child({i})
+        color: white
+
+  /* define progress in percentage */
+  for v in 1..100
+    &[data-v={'"' + v + '"'}]
+      summary:before
+        content: '' + v + ''
 
   ol
-    border-radius: size
-    border: orbit solid border
-    box-sizing: content-box
+    border-radius: 50%
+    border: orbital solid border
     height: size
     list-style: none
     padding: 0
     position: relative
     width: size
 
-  li, summary
+  li
+  summary
     background-color: inner
-    border-radius: atoms
-    height: atoms
-    width: atoms
+    border-radius: 50%
+    height: electron
+    text-align: center
+    width: electron
+
+  /*aside
+   transform: rotate(0deg)
+    clip: rect(0, (size / 2 + orbital), (size / 2 + orbital), 0);
+   */
+
+  li
+  li:before
+    left: 50%
+    margin: round(electron / -2)
+    position: absolute
+    top: 50%
 
   li
     background-color: border
-    left: 50%
-    margin: (atoms/-2)
-    position: absolute
-    top: 50%
 
     &:before
       content: counter(atomic)
       counter-increment: atomic
       font-size: 20px
-      left: 50%
       margin: -12px 0 0 -6px
-      position: absolute
-      top: 50%
 
     &:hover a
       display: block
 
   summary
-    left: 50%
-    margin: (atoms/-2)
+    height = size + 2 * orbital - 2
+
+    background:
+        linear-gradient(150deg, inner 42.34%, transparent 42.34%)
+      , transparent linear-gradient(transparent, transparent) 50% 100%
+    background-repeat: no-repeat
+    background-size: 50% 50%
+    color: white
+    display: block
+    height: height
+    left: 1px
     position: absolute
-    text-align: center
-    top: 50%
+    top: 1px
+    width: height
+    z-index: -1
 
-  output
-    font-size: font
-    display: inline-block
-    margin-top: 0.5em
+    &:before
+      font-size: font
 
-  sup
-    font-size: (font/2)
+    &:after
+      content: '%'
+      font-size: round(font / 2)
+      vertical-align: super
 
   a
     display: none

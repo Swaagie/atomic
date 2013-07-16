@@ -1,157 +1,491 @@
 /* dimensions of elements */
 /* colors */
+/* move circles along the edge */
 .atomic {
-  color: #fff;
+  color: #16a085;
   counter-reset: atomic;
   font-family: Montserrat, Helvetica;
-  height: 228.57142857142858px;
+  height: 228px;
   position: relative;
-  width: 228.57142857142858px;
+  width: 228px;
+/* this will hide electrons if there is only one step */
+/* calculate the positions for each atom */
+/* define progress in percentage */
+/*aside
+   transform: rotate(0deg)
+    clip: rect(0, (size / 2 + orbital), (size / 2 + orbital), 0);
+   */
 }
-.atomic[data-steps="2"] li:nth-child(1) {
-  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+.atomic li {
+  display: none;
 }
-.atomic[data-steps="2"] li:nth-child(2) {
-  -webkit-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -moz-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -ms-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -o-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+.atomic[data-n] li:nth-child(1) {
+  display: block;
+  -webkit-transform: rotate(-90deg) translate(107px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(107px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(107px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(107px) rotate(90deg);
+  transform: rotate(-90deg) translate(107px) rotate(90deg);
 }
-.atomic[data-steps="3"] li:nth-child(1) {
-  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+.atomic[data-n="2"] li:nth-child(2) {
+  display: block;
+  -webkit-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  transform: rotate(90deg) translate(107px) rotate(-90deg);
 }
-.atomic[data-steps="3"] li:nth-child(2) {
-  -webkit-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  -moz-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  -ms-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  -o-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+.atomic[data-n="3"] li:nth-child(2) {
+  display: block;
+  -webkit-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  -moz-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  -ms-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  -o-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  transform: rotate(30deg) translate(107px) rotate(-30deg);
 }
-.atomic[data-steps="3"] li:nth-child(3) {
-  -webkit-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  -moz-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  -ms-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  -o-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+.atomic[data-n="3"] li:nth-child(3) {
+  display: block;
+  -webkit-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  -moz-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  -ms-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  -o-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  transform: rotate(150deg) translate(107px) rotate(-150deg);
 }
-.atomic[data-steps="4"] li:nth-child(1) {
-  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+.atomic[data-n="4"] li:nth-child(2) {
+  display: block;
+  -webkit-transform: rotate(0deg) translate(107px) rotate(0deg);
+  -moz-transform: rotate(0deg) translate(107px) rotate(0deg);
+  -ms-transform: rotate(0deg) translate(107px) rotate(0deg);
+  -o-transform: rotate(0deg) translate(107px) rotate(0deg);
+  transform: rotate(0deg) translate(107px) rotate(0deg);
 }
-.atomic[data-steps="4"] li:nth-child(2) {
-  -webkit-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
-  -moz-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
-  -ms-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
-  -o-transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
-  transform: rotate(0deg) translate(107.14285714285714px) rotate(0deg);
+.atomic[data-n="4"] li:nth-child(3) {
+  display: block;
+  -webkit-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  transform: rotate(90deg) translate(107px) rotate(-90deg);
 }
-.atomic[data-steps="4"] li:nth-child(3) {
-  -webkit-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -moz-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -ms-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -o-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+.atomic[data-n="4"] li:nth-child(4) {
+  display: block;
+  -webkit-transform: rotate(180deg) translate(107px) rotate(-180deg);
+  -moz-transform: rotate(180deg) translate(107px) rotate(-180deg);
+  -ms-transform: rotate(180deg) translate(107px) rotate(-180deg);
+  -o-transform: rotate(180deg) translate(107px) rotate(-180deg);
+  transform: rotate(180deg) translate(107px) rotate(-180deg);
 }
-.atomic[data-steps="4"] li:nth-child(4) {
-  -webkit-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
-  -moz-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
-  -ms-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
-  -o-transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
-  transform: rotate(180deg) translate(107.14285714285714px) rotate(-180deg);
+.atomic[data-n="5"] li:nth-child(2) {
+  display: block;
+  -webkit-transform: rotate(-18deg) translate(107px) rotate(18deg);
+  -moz-transform: rotate(-18deg) translate(107px) rotate(18deg);
+  -ms-transform: rotate(-18deg) translate(107px) rotate(18deg);
+  -o-transform: rotate(-18deg) translate(107px) rotate(18deg);
+  transform: rotate(-18deg) translate(107px) rotate(18deg);
 }
-.atomic[data-steps="5"] li:nth-child(1) {
-  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+.atomic[data-n="5"] li:nth-child(3) {
+  display: block;
+  -webkit-transform: rotate(54deg) translate(107px) rotate(-54deg);
+  -moz-transform: rotate(54deg) translate(107px) rotate(-54deg);
+  -ms-transform: rotate(54deg) translate(107px) rotate(-54deg);
+  -o-transform: rotate(54deg) translate(107px) rotate(-54deg);
+  transform: rotate(54deg) translate(107px) rotate(-54deg);
 }
-.atomic[data-steps="5"] li:nth-child(2) {
-  -webkit-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
-  -moz-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
-  -ms-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
-  -o-transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
-  transform: rotate(-18deg) translate(107.14285714285714px) rotate(18deg);
+.atomic[data-n="5"] li:nth-child(4) {
+  display: block;
+  -webkit-transform: rotate(126deg) translate(107px) rotate(-126deg);
+  -moz-transform: rotate(126deg) translate(107px) rotate(-126deg);
+  -ms-transform: rotate(126deg) translate(107px) rotate(-126deg);
+  -o-transform: rotate(126deg) translate(107px) rotate(-126deg);
+  transform: rotate(126deg) translate(107px) rotate(-126deg);
 }
-.atomic[data-steps="5"] li:nth-child(3) {
-  -webkit-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
-  -moz-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
-  -ms-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
-  -o-transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
-  transform: rotate(54deg) translate(107.14285714285714px) rotate(-54deg);
+.atomic[data-n="5"] li:nth-child(5) {
+  display: block;
+  -webkit-transform: rotate(198deg) translate(107px) rotate(-198deg);
+  -moz-transform: rotate(198deg) translate(107px) rotate(-198deg);
+  -ms-transform: rotate(198deg) translate(107px) rotate(-198deg);
+  -o-transform: rotate(198deg) translate(107px) rotate(-198deg);
+  transform: rotate(198deg) translate(107px) rotate(-198deg);
 }
-.atomic[data-steps="5"] li:nth-child(4) {
-  -webkit-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
-  -moz-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
-  -ms-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
-  -o-transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
-  transform: rotate(126deg) translate(107.14285714285714px) rotate(-126deg);
+.atomic[data-n="6"] li:nth-child(2) {
+  display: block;
+  -webkit-transform: rotate(-30deg) translate(107px) rotate(30deg);
+  -moz-transform: rotate(-30deg) translate(107px) rotate(30deg);
+  -ms-transform: rotate(-30deg) translate(107px) rotate(30deg);
+  -o-transform: rotate(-30deg) translate(107px) rotate(30deg);
+  transform: rotate(-30deg) translate(107px) rotate(30deg);
 }
-.atomic[data-steps="5"] li:nth-child(5) {
-  -webkit-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
-  -moz-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
-  -ms-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
-  -o-transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
-  transform: rotate(198deg) translate(107.14285714285714px) rotate(-198deg);
+.atomic[data-n="6"] li:nth-child(3) {
+  display: block;
+  -webkit-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  -moz-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  -ms-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  -o-transform: rotate(30deg) translate(107px) rotate(-30deg);
+  transform: rotate(30deg) translate(107px) rotate(-30deg);
 }
-.atomic[data-steps="6"] li:nth-child(1) {
-  -webkit-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -moz-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -ms-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  -o-transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
-  transform: rotate(-90deg) translate(107.14285714285714px) rotate(90deg);
+.atomic[data-n="6"] li:nth-child(4) {
+  display: block;
+  -webkit-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(107px) rotate(-90deg);
+  transform: rotate(90deg) translate(107px) rotate(-90deg);
 }
-.atomic[data-steps="6"] li:nth-child(2) {
-  -webkit-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
-  -moz-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
-  -ms-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
-  -o-transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
-  transform: rotate(-30deg) translate(107.14285714285714px) rotate(30deg);
+.atomic[data-n="6"] li:nth-child(5) {
+  display: block;
+  -webkit-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  -moz-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  -ms-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  -o-transform: rotate(150deg) translate(107px) rotate(-150deg);
+  transform: rotate(150deg) translate(107px) rotate(-150deg);
 }
-.atomic[data-steps="6"] li:nth-child(3) {
-  -webkit-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  -moz-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  -ms-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  -o-transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
-  transform: rotate(30deg) translate(107.14285714285714px) rotate(-30deg);
+.atomic[data-n="6"] li:nth-child(6) {
+  display: block;
+  -webkit-transform: rotate(210deg) translate(107px) rotate(-210deg);
+  -moz-transform: rotate(210deg) translate(107px) rotate(-210deg);
+  -ms-transform: rotate(210deg) translate(107px) rotate(-210deg);
+  -o-transform: rotate(210deg) translate(107px) rotate(-210deg);
+  transform: rotate(210deg) translate(107px) rotate(-210deg);
 }
-.atomic[data-steps="6"] li:nth-child(4) {
-  -webkit-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -moz-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -ms-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  -o-transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
-  transform: rotate(90deg) translate(107.14285714285714px) rotate(-90deg);
+.atomic[data-i="1"] li:nth-child(-n+0):before {
+  content: '✓';
 }
-.atomic[data-steps="6"] li:nth-child(5) {
-  -webkit-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  -moz-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  -ms-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  -o-transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
-  transform: rotate(150deg) translate(107.14285714285714px) rotate(-150deg);
+.atomic[data-i="1"] li:nth-child(1) {
+  color: #fff;
 }
-.atomic[data-steps="6"] li:nth-child(6) {
-  -webkit-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
-  -moz-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
-  -ms-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
-  -o-transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
-  transform: rotate(210deg) translate(107.14285714285714px) rotate(-210deg);
+.atomic[data-i="2"] li:nth-child(-n+1):before {
+  content: '✓';
+}
+.atomic[data-i="2"] li:nth-child(2) {
+  color: #fff;
+}
+.atomic[data-i="3"] li:nth-child(-n+2):before {
+  content: '✓';
+}
+.atomic[data-i="3"] li:nth-child(3) {
+  color: #fff;
+}
+.atomic[data-i="4"] li:nth-child(-n+3):before {
+  content: '✓';
+}
+.atomic[data-i="4"] li:nth-child(4) {
+  color: #fff;
+}
+.atomic[data-i="5"] li:nth-child(-n+4):before {
+  content: '✓';
+}
+.atomic[data-i="5"] li:nth-child(5) {
+  color: #fff;
+}
+.atomic[data-i="6"] li:nth-child(-n+5):before {
+  content: '✓';
+}
+.atomic[data-i="6"] li:nth-child(6) {
+  color: #fff;
+}
+.atomic[data-v="1"] summary:before {
+  content: '1';
+}
+.atomic[data-v="2"] summary:before {
+  content: '2';
+}
+.atomic[data-v="3"] summary:before {
+  content: '3';
+}
+.atomic[data-v="4"] summary:before {
+  content: '4';
+}
+.atomic[data-v="5"] summary:before {
+  content: '5';
+}
+.atomic[data-v="6"] summary:before {
+  content: '6';
+}
+.atomic[data-v="7"] summary:before {
+  content: '7';
+}
+.atomic[data-v="8"] summary:before {
+  content: '8';
+}
+.atomic[data-v="9"] summary:before {
+  content: '9';
+}
+.atomic[data-v="10"] summary:before {
+  content: '10';
+}
+.atomic[data-v="11"] summary:before {
+  content: '11';
+}
+.atomic[data-v="12"] summary:before {
+  content: '12';
+}
+.atomic[data-v="13"] summary:before {
+  content: '13';
+}
+.atomic[data-v="14"] summary:before {
+  content: '14';
+}
+.atomic[data-v="15"] summary:before {
+  content: '15';
+}
+.atomic[data-v="16"] summary:before {
+  content: '16';
+}
+.atomic[data-v="17"] summary:before {
+  content: '17';
+}
+.atomic[data-v="18"] summary:before {
+  content: '18';
+}
+.atomic[data-v="19"] summary:before {
+  content: '19';
+}
+.atomic[data-v="20"] summary:before {
+  content: '20';
+}
+.atomic[data-v="21"] summary:before {
+  content: '21';
+}
+.atomic[data-v="22"] summary:before {
+  content: '22';
+}
+.atomic[data-v="23"] summary:before {
+  content: '23';
+}
+.atomic[data-v="24"] summary:before {
+  content: '24';
+}
+.atomic[data-v="25"] summary:before {
+  content: '25';
+}
+.atomic[data-v="26"] summary:before {
+  content: '26';
+}
+.atomic[data-v="27"] summary:before {
+  content: '27';
+}
+.atomic[data-v="28"] summary:before {
+  content: '28';
+}
+.atomic[data-v="29"] summary:before {
+  content: '29';
+}
+.atomic[data-v="30"] summary:before {
+  content: '30';
+}
+.atomic[data-v="31"] summary:before {
+  content: '31';
+}
+.atomic[data-v="32"] summary:before {
+  content: '32';
+}
+.atomic[data-v="33"] summary:before {
+  content: '33';
+}
+.atomic[data-v="34"] summary:before {
+  content: '34';
+}
+.atomic[data-v="35"] summary:before {
+  content: '35';
+}
+.atomic[data-v="36"] summary:before {
+  content: '36';
+}
+.atomic[data-v="37"] summary:before {
+  content: '37';
+}
+.atomic[data-v="38"] summary:before {
+  content: '38';
+}
+.atomic[data-v="39"] summary:before {
+  content: '39';
+}
+.atomic[data-v="40"] summary:before {
+  content: '40';
+}
+.atomic[data-v="41"] summary:before {
+  content: '41';
+}
+.atomic[data-v="42"] summary:before {
+  content: '42';
+}
+.atomic[data-v="43"] summary:before {
+  content: '43';
+}
+.atomic[data-v="44"] summary:before {
+  content: '44';
+}
+.atomic[data-v="45"] summary:before {
+  content: '45';
+}
+.atomic[data-v="46"] summary:before {
+  content: '46';
+}
+.atomic[data-v="47"] summary:before {
+  content: '47';
+}
+.atomic[data-v="48"] summary:before {
+  content: '48';
+}
+.atomic[data-v="49"] summary:before {
+  content: '49';
+}
+.atomic[data-v="50"] summary:before {
+  content: '50';
+}
+.atomic[data-v="51"] summary:before {
+  content: '51';
+}
+.atomic[data-v="52"] summary:before {
+  content: '52';
+}
+.atomic[data-v="53"] summary:before {
+  content: '53';
+}
+.atomic[data-v="54"] summary:before {
+  content: '54';
+}
+.atomic[data-v="55"] summary:before {
+  content: '55';
+}
+.atomic[data-v="56"] summary:before {
+  content: '56';
+}
+.atomic[data-v="57"] summary:before {
+  content: '57';
+}
+.atomic[data-v="58"] summary:before {
+  content: '58';
+}
+.atomic[data-v="59"] summary:before {
+  content: '59';
+}
+.atomic[data-v="60"] summary:before {
+  content: '60';
+}
+.atomic[data-v="61"] summary:before {
+  content: '61';
+}
+.atomic[data-v="62"] summary:before {
+  content: '62';
+}
+.atomic[data-v="63"] summary:before {
+  content: '63';
+}
+.atomic[data-v="64"] summary:before {
+  content: '64';
+}
+.atomic[data-v="65"] summary:before {
+  content: '65';
+}
+.atomic[data-v="66"] summary:before {
+  content: '66';
+}
+.atomic[data-v="67"] summary:before {
+  content: '67';
+}
+.atomic[data-v="68"] summary:before {
+  content: '68';
+}
+.atomic[data-v="69"] summary:before {
+  content: '69';
+}
+.atomic[data-v="70"] summary:before {
+  content: '70';
+}
+.atomic[data-v="71"] summary:before {
+  content: '71';
+}
+.atomic[data-v="72"] summary:before {
+  content: '72';
+}
+.atomic[data-v="73"] summary:before {
+  content: '73';
+}
+.atomic[data-v="74"] summary:before {
+  content: '74';
+}
+.atomic[data-v="75"] summary:before {
+  content: '75';
+}
+.atomic[data-v="76"] summary:before {
+  content: '76';
+}
+.atomic[data-v="77"] summary:before {
+  content: '77';
+}
+.atomic[data-v="78"] summary:before {
+  content: '78';
+}
+.atomic[data-v="79"] summary:before {
+  content: '79';
+}
+.atomic[data-v="80"] summary:before {
+  content: '80';
+}
+.atomic[data-v="81"] summary:before {
+  content: '81';
+}
+.atomic[data-v="82"] summary:before {
+  content: '82';
+}
+.atomic[data-v="83"] summary:before {
+  content: '83';
+}
+.atomic[data-v="84"] summary:before {
+  content: '84';
+}
+.atomic[data-v="85"] summary:before {
+  content: '85';
+}
+.atomic[data-v="86"] summary:before {
+  content: '86';
+}
+.atomic[data-v="87"] summary:before {
+  content: '87';
+}
+.atomic[data-v="88"] summary:before {
+  content: '88';
+}
+.atomic[data-v="89"] summary:before {
+  content: '89';
+}
+.atomic[data-v="90"] summary:before {
+  content: '90';
+}
+.atomic[data-v="91"] summary:before {
+  content: '91';
+}
+.atomic[data-v="92"] summary:before {
+  content: '92';
+}
+.atomic[data-v="93"] summary:before {
+  content: '93';
+}
+.atomic[data-v="94"] summary:before {
+  content: '94';
+}
+.atomic[data-v="95"] summary:before {
+  content: '95';
+}
+.atomic[data-v="96"] summary:before {
+  content: '96';
+}
+.atomic[data-v="97"] summary:before {
+  content: '97';
+}
+.atomic[data-v="98"] summary:before {
+  content: '98';
+}
+.atomic[data-v="99"] summary:before {
+  content: '99';
+}
+.atomic[data-v="100"] summary:before {
+  content: '100';
 }
 .atomic ol {
-  border-radius: 200px;
-  border: 14.285714285714286px solid #2ecc71;
-  box-sizing: content-box;
+  border-radius: 50%;
+  border: 14px solid #2ecc71;
   height: 200px;
   list-style: none;
   padding: 0;
@@ -161,43 +495,50 @@
 .atomic li,
 .atomic summary {
   background-color: #16a085;
-  border-radius: 61.80339886543632px;
-  height: 61.80339886543632px;
-  width: 61.80339886543632px;
+  border-radius: 50%;
+  height: 62px;
+  text-align: center;
+  width: 62px;
+}
+.atomic li,
+.atomic li:before {
+  left: 50%;
+  margin: -31px;
+  position: absolute;
+  top: 50%;
 }
 .atomic li {
   background-color: #2ecc71;
-  left: 50%;
-  margin: -30.90169943271816px;
-  position: absolute;
-  top: 50%;
 }
 .atomic li:before {
   content: counter(atomic);
   counter-increment: atomic;
   font-size: 20px;
-  left: 50%;
   margin: -12px 0 0 -6px;
-  position: absolute;
-  top: 50%;
 }
 .atomic li:hover a {
   display: block;
 }
 .atomic summary {
-  left: 50%;
-  margin: -30.90169943271816px;
+  background: linear-gradient(150deg, #16a085 42.34%, transparent 42.34%), transparent linear-gradient(transparent, transparent) 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  color: #fff;
+  display: block;
+  height: 226px;
+  left: 1px;
   position: absolute;
-  text-align: center;
-  top: 50%;
+  top: 1px;
+  width: 226px;
+  z-index: -1;
 }
-.atomic output {
-  font-size: 28.571428571428573px;
-  display: inline-block;
-  margin-top: 0.5em;
+.atomic summary:before {
+  font-size: 29px;
 }
-.atomic sup {
-  font-size: 14.285714285714286px;
+.atomic summary:after {
+  content: '%';
+  font-size: 15px;
+  vertical-align: super;
 }
 .atomic a {
   display: none;
