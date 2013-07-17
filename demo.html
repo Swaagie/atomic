@@ -1,20 +1,28 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset=utf-8>
     <title>Atomic progress indicator</title>
     <link href=atomic.css rel=stylesheet>
-    <link href=http://fonts.googleapis.com/css?family=Montserrat rel=stylesheet>
   </head>
+  <body>
+    <h1 style="font-family: Montserrat">Atomic progress</h1>
 
-  <section class=atomic data-n=5 data-i=3 data-v=55>
-    <ol>
-      <li><a href=#signup>Signup</a></li>
-      <li><a href=#login>Login</a></li>
-      <li><a href=#login>Login</a></li>
-      <li><a href=#login>Login</a></li>
-      <li><a href=#login>Login</a></li>
-    </ol>
+    <!-- Progress bar -->
+    <section class=atomic data-n=5 data-v=54>
+      <input type=radio id=i1 name=s>
+      <input type=radio id=i2 name=s>
+      <input type=radio id=i3 name=s>
+      <input type=radio id=i4 name=s>
+      <input type=radio id=i5 name=s>
 
-    <summary></summary>
-  </section>
+      <ol>
+        <li><label for=i1></label></li>
+        <li><label for=i2></label></li>
+        <li><label for=i3></label></li>
+        <li><label for=i4></label></li>
+        <li><label for=i5></label></li>
+      </ol>
+    </section>
+  </body>
 </html>

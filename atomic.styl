@@ -1,12 +1,24 @@
+/* import the montserrat font */
+@import url(http://fonts.googleapis.com/css?family=Montserrat)
+
 /* dimensions of elements */
 size = 200px
 electron = round(size / 3.236067978)
 orbital = round(size / 14)
 font = round(size / 7)
+total = size + 2 * orbital + electron
 
 /* colors */
 border = #2ECC71
 inner = #16A085
+bg = white
+
+transition()
+  -webkit-transition arguments
+  -moz-transition arguments
+  -ms-transition arguments
+  -o-transition arguments
+  transition arguments
 
 transform()
   -webkit-transform arguments
@@ -21,16 +33,26 @@ divide(a,b)
   display: block
   transform: rotate(p) translate(size / 2 + orbital / 2) rotate(-1 * p)
 
+gradient(n)
+  incr = (180 / 50)
+  side = n < 50
+  background:
+      linear-gradient(round(-90deg + n * incr), (side ? bg : transparent) 50%, (side ? transparent : inner) 0)
+    , linear-gradient(90deg, bg 50%, inner 0)
+    , bg
+
+/* define styleset, restricted to atomic */
 .atomic
-  color: inner
   counter-reset: atomic
   font-family: Montserrat,Helvetica
-  height: size + 2 * orbital
+  height: total
+  padding-top: round(electron / 2)
   position: relative
-  width: size + 2 * orbital
+  width: total
 
-  /* this will hide electrons if there is only one step */
+  /* this will hide electrons and input steps */
   li
+  input[type=radio]
     display: none
 
   /* calculate the positions for each atom */
@@ -42,45 +64,62 @@ divide(a,b)
 
     &[data-n={'"' + n + '"'}]
       for step in (2..n)
+        pro = (100 / n) * (step - 1)
+
         li:nth-child({step})
           divide(chunk, step)
 
+        input:nth-child({step}):checked
+          & ~ ol
+            gradient(pro)
+
+            &:before
+              content: '' + round(pro) + ''
+
   for i in 1..6
-    &[data-i={'"' + i + '"'}]
+    input:nth-child({i}):checked
       previous = i - 1
-      li:nth-child(-n+{previous}):before
-        content: '✓'
 
-      li:nth-child({i})
-        color: white
+      & ~ ol
+        li:nth-child(-n+{previous}):before
+          content: '✓'
 
-  /* define progress in percentage */
+        li:nth-child({i})
+          color: white
+
+  /* define percentual progress in three stadia */
   for v in 1..100
     &[data-v={'"' + v + '"'}]
-      summary:before
-        content: '' + v + ''
+      ol
+        gradient(v)
 
-  ol
+        &:before
+          content: '' + v + ''
+
+  &[data-v] ol
+    background-repeat: no-repeat
     border-radius: 50%
     border: orbital solid border
     height: size
     list-style: none
+    margin: 0 auto
     padding: 0
     position: relative
+    text-align: center
     width: size
 
-  li
-  summary
-    background-color: inner
-    border-radius: 50%
-    height: electron
-    text-align: center
-    width: electron
-
-  /*aside
-   transform: rotate(0deg)
-    clip: rect(0, (size / 2 + orbital), (size / 2 + orbital), 0);
-   */
+    &:before
+      background-color: inner
+      border-radius: 50%
+      color: white
+      font-size: font
+      height: electron - round(font / 2)
+      left: 50%
+      margin: round(electron / -2)
+      position: absolute
+      top: 50%
+      width: electron
+      padding-top: round(font / 2)
 
   li
   li:before
@@ -91,40 +130,24 @@ divide(a,b)
 
   li
     background-color: border
+    border-radius: 50%
+    color: inner
+    height: electron
+    width: electron
 
     &:before
       content: counter(atomic)
       counter-increment: atomic
       font-size: 20px
       margin: -12px 0 0 -6px
+      z-index: -1
 
-    &:hover a
+    &:hover label
+      cursor: pointer
       display: block
 
-  summary
-    height = size + 2 * orbital - 2
-
-    background:
-        linear-gradient(150deg, inner 42.34%, transparent 42.34%)
-      , transparent linear-gradient(transparent, transparent) 50% 100%
-    background-repeat: no-repeat
-    background-size: 50% 50%
-    color: white
-    display: block
-    height: height
-    left: 1px
-    position: absolute
-    top: 1px
-    width: height
-    z-index: -1
-
-    &:before
-      font-size: font
-
-    &:after
-      content: '%'
-      font-size: round(font / 2)
-      vertical-align: super
-
-  a
+  label
     display: none
+    height: 100%
+    text-indent: -9999px
+    width: 100%
