@@ -1,23 +1,6 @@
 (function Atomic(w) {
   'use strict';
 
-  var expectedTime = 0
-    , vendors = ['ms', 'moz', 'webkit', 'o']
-    , atom = document.getElementsByClassName('atomic')[0]
-    , electrons = atom.getElementsByTagName('li')
-    , text = atom.getElementsByTagName('input')[0]
-    , canvas = atom.getElementsByTagName('canvas')[0]
-    , ctx = canvas.getContext('2d')
-    , size = getComputedStyle(canvas).getPropertyValue('width').replace('px', '')
-    , color = getComputedStyle(atom).getPropertyValue('color')
-    , value = +text.value
-    , i = electrons.length
-    , n = 100 / i
-    , r = size / 2
-    , π = Math.PI
-    , ψ = 2 * π / 100
-    , vendor;
-
   while(!w.requestAnimationFrame && (vendor = vendors.pop())) {
     w.requestAnimationFrame = w[vendor + 'RequestAnimationFrame'];
     w.cancelAnimationFrame = w[vendor + 'CancelAnimationFrame']
@@ -38,6 +21,23 @@
   }
 
   if (!w.cancelAnimationFrame) w.cancelAnimationFrame = clearTimeout;
+
+  var expectedTime = 0
+    , vendors = ['ms', 'moz', 'webkit', 'o']
+    , atom = document.getElementsByClassName('atomic')[0]
+    , electrons = atom.getElementsByTagName('li')
+    , text = atom.getElementsByTagName('input')[0]
+    , canvas = atom.getElementsByTagName('canvas')[0]
+    , ctx = canvas.getContext('2d')
+    , size = getComputedStyle(canvas).getPropertyValue('width').replace('px', '')
+    , color = getComputedStyle(atom).getPropertyValue('color')
+    , value = +text.value
+    , i = electrons.length
+    , n = 100 / i
+    , r = size / 2
+    , π = Math.PI
+    , ψ = 2 * π / 100
+    , vendor;
 
   /**
    * Small helper function to set attributes on created elements.
