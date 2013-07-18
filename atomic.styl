@@ -4,14 +4,13 @@
 /* dimensions of elements */
 size = 200px
 electron = round(size / 3.236067978)
-orbital = round(size / 14)
-font = round(size / 7)
+orbital = round(size / 17)
+font = round(size / 10)
 total = size + 2 * orbital + electron
 
 /* colors */
 border = #2ECC71
 inner = #16A085
-bg = white
 
 transition()
   -webkit-transition arguments
@@ -30,29 +29,21 @@ transform()
 /* move circles along the edge */
 divide(a,b)
   p = (a * b) - (90 + a)deg
-  display: block
   transform: rotate(p) translate(size / 2 + orbital / 2) rotate(-1 * p)
-
-gradient(n)
-  incr = (180 / 50)
-  side = n < 50
-  background:
-      linear-gradient(round(-90deg + n * incr), (side ? bg : transparent) 50%, (side ? transparent : inner) 0)
-    , linear-gradient(90deg, bg 50%, inner 0)
-    , bg
 
 /* define styleset, restricted to atomic */
 .atomic
+  color: inner
   counter-reset: atomic
+  display: table-cell
   font-family: Montserrat,Helvetica
   height: total
-  padding-top: round(electron / 2)
   position: relative
+  vertical-align: middle
   width: total
 
   /* this will hide electrons and input steps */
-  li
-  input[type=radio]
+  input
     display: none
 
   /* calculate the positions for each atom */
@@ -60,43 +51,21 @@ gradient(n)
     divide(180, 1)
 
   for n in 2..6
-    chunk = (360 / n)
-
     &[data-n={'"' + n + '"'}]
       for step in (2..n)
-        pro = (100 / n) * (step - 1)
-
         li:nth-child({step})
-          divide(chunk, step)
-
-        input:nth-child({step}):checked
-          & ~ ol
-            gradient(pro)
-
-            &:before
-              content: '' + round(pro) + ''
+          divide(360 / n, step)
 
   for i in 1..6
     input:nth-child({i}):checked
-      previous = i - 1
-
       & ~ ol
-        li:nth-child(-n+{previous}):before
+        li:nth-child(-n+{i - 1}):before
           content: '✓'
 
         li:nth-child({i})
           color: white
 
-  /* define percentual progress in three stadia */
-  for v in 1..100
-    &[data-v={'"' + v + '"'}]
-      ol
-        gradient(v)
-
-        &:before
-          content: '' + v + ''
-
-  &[data-v] ol
+  ol
     background-repeat: no-repeat
     border-radius: 50%
     border: orbital solid border
@@ -109,42 +78,57 @@ gradient(n)
     width: size
 
     &:before
+      cntr = electron * 1.5
+
       background-color: inner
       border-radius: 50%
+      content: '54'
       color: white
-      font-size: font
-      height: electron - round(font / 2)
+      font-size: font * 2
+      padding-top: font
+      height: cntr - font
       left: 50%
-      margin: round(electron / -2)
+      margin: round(cntr / -2)
       position: absolute
       top: 50%
-      width: electron
-      padding-top: round(font / 2)
-
-  li
-  li:before
-    left: 50%
-    margin: round(electron / -2)
-    position: absolute
-    top: 50%
+      width: cntr
 
   li
     background-color: border
     border-radius: 50%
-    color: inner
     height: electron
+    left: 50%
+    margin: round(electron / -2)
+    position: absolute
+    top: 50%
     width: electron
 
     &:before
       content: counter(atomic)
       counter-increment: atomic
-      font-size: 20px
-      margin: -12px 0 0 -6px
+      font-size: font
+      text-align: center
+      margin-top: round(electron / 2) - (font / 2)
+      position: absolute
+      top: 0
+      left: 0
+      width: electron
       z-index: -1
 
     &:hover label
       cursor: pointer
       display: block
+
+  canvas
+    ref =  size + orbital * 2
+
+    border-radius: 50%
+    height: ref
+    left: round((total - ref) / 2)
+    position: absolute
+    top: round(electron / 2)
+    width: ref
+    z-index: -1
 
   label
     display: none

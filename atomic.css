@@ -5,237 +5,131 @@
 /* move circles along the edge */
 /* define styleset, restricted to atomic */
 .atomic {
+  color: #16a085;
   counter-reset: atomic;
+  display: table-cell;
   font-family: Montserrat, Helvetica;
-  height: 290px;
-  padding-top: 31px;
+  height: 286px;
   position: relative;
-  width: 290px;
+  vertical-align: middle;
+  width: 286px;
 /* this will hide electrons and input steps */
 /* calculate the positions for each atom */
-/* define percentual progress in three stadia */
 }
-.atomic li,
-.atomic input[type=radio] {
+.atomic input {
   display: none;
 }
 .atomic[data-n] li:nth-child(1) {
-  display: block;
-  -webkit-transform: rotate(-90deg) translate(107px) rotate(90deg);
-  -moz-transform: rotate(-90deg) translate(107px) rotate(90deg);
-  -ms-transform: rotate(-90deg) translate(107px) rotate(90deg);
-  -o-transform: rotate(-90deg) translate(107px) rotate(90deg);
-  transform: rotate(-90deg) translate(107px) rotate(90deg);
+  -webkit-transform: rotate(-90deg) translate(106px) rotate(90deg);
+  -moz-transform: rotate(-90deg) translate(106px) rotate(90deg);
+  -ms-transform: rotate(-90deg) translate(106px) rotate(90deg);
+  -o-transform: rotate(-90deg) translate(106px) rotate(90deg);
+  transform: rotate(-90deg) translate(106px) rotate(90deg);
 }
 .atomic[data-n="2"] li:nth-child(2) {
-  display: block;
-  -webkit-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -moz-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -ms-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -o-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  transform: rotate(90deg) translate(107px) rotate(-90deg);
-}
-.atomic[data-n="2"] input:nth-child(2):checked ~ ol {
-  background: linear-gradient(90deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="2"] input:nth-child(2):checked ~ ol:before {
-  content: '50';
+  -webkit-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  transform: rotate(90deg) translate(106px) rotate(-90deg);
 }
 .atomic[data-n="3"] li:nth-child(2) {
-  display: block;
-  -webkit-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  -moz-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  -ms-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  -o-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  transform: rotate(30deg) translate(107px) rotate(-30deg);
-}
-.atomic[data-n="3"] input:nth-child(2):checked ~ ol {
-  background: linear-gradient(30deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="3"] input:nth-child(2):checked ~ ol:before {
-  content: '33';
+  -webkit-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  -moz-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  -ms-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  -o-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  transform: rotate(30deg) translate(106px) rotate(-30deg);
 }
 .atomic[data-n="3"] li:nth-child(3) {
-  display: block;
-  -webkit-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  -moz-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  -ms-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  -o-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  transform: rotate(150deg) translate(107px) rotate(-150deg);
-}
-.atomic[data-n="3"] input:nth-child(3):checked ~ ol {
-  background: linear-gradient(150deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="3"] input:nth-child(3):checked ~ ol:before {
-  content: '67';
+  -webkit-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  -moz-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  -ms-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  -o-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  transform: rotate(150deg) translate(106px) rotate(-150deg);
 }
 .atomic[data-n="4"] li:nth-child(2) {
-  display: block;
-  -webkit-transform: rotate(0deg) translate(107px) rotate(0deg);
-  -moz-transform: rotate(0deg) translate(107px) rotate(0deg);
-  -ms-transform: rotate(0deg) translate(107px) rotate(0deg);
-  -o-transform: rotate(0deg) translate(107px) rotate(0deg);
-  transform: rotate(0deg) translate(107px) rotate(0deg);
-}
-.atomic[data-n="4"] input:nth-child(2):checked ~ ol {
-  background: linear-gradient(0deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="4"] input:nth-child(2):checked ~ ol:before {
-  content: '25';
+  -webkit-transform: rotate(0deg) translate(106px) rotate(0deg);
+  -moz-transform: rotate(0deg) translate(106px) rotate(0deg);
+  -ms-transform: rotate(0deg) translate(106px) rotate(0deg);
+  -o-transform: rotate(0deg) translate(106px) rotate(0deg);
+  transform: rotate(0deg) translate(106px) rotate(0deg);
 }
 .atomic[data-n="4"] li:nth-child(3) {
-  display: block;
-  -webkit-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -moz-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -ms-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -o-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  transform: rotate(90deg) translate(107px) rotate(-90deg);
-}
-.atomic[data-n="4"] input:nth-child(3):checked ~ ol {
-  background: linear-gradient(90deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="4"] input:nth-child(3):checked ~ ol:before {
-  content: '50';
+  -webkit-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  transform: rotate(90deg) translate(106px) rotate(-90deg);
 }
 .atomic[data-n="4"] li:nth-child(4) {
-  display: block;
-  -webkit-transform: rotate(180deg) translate(107px) rotate(-180deg);
-  -moz-transform: rotate(180deg) translate(107px) rotate(-180deg);
-  -ms-transform: rotate(180deg) translate(107px) rotate(-180deg);
-  -o-transform: rotate(180deg) translate(107px) rotate(-180deg);
-  transform: rotate(180deg) translate(107px) rotate(-180deg);
-}
-.atomic[data-n="4"] input:nth-child(4):checked ~ ol {
-  background: linear-gradient(180deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="4"] input:nth-child(4):checked ~ ol:before {
-  content: '75';
+  -webkit-transform: rotate(180deg) translate(106px) rotate(-180deg);
+  -moz-transform: rotate(180deg) translate(106px) rotate(-180deg);
+  -ms-transform: rotate(180deg) translate(106px) rotate(-180deg);
+  -o-transform: rotate(180deg) translate(106px) rotate(-180deg);
+  transform: rotate(180deg) translate(106px) rotate(-180deg);
 }
 .atomic[data-n="5"] li:nth-child(2) {
-  display: block;
-  -webkit-transform: rotate(-18deg) translate(107px) rotate(18deg);
-  -moz-transform: rotate(-18deg) translate(107px) rotate(18deg);
-  -ms-transform: rotate(-18deg) translate(107px) rotate(18deg);
-  -o-transform: rotate(-18deg) translate(107px) rotate(18deg);
-  transform: rotate(-18deg) translate(107px) rotate(18deg);
-}
-.atomic[data-n="5"] input:nth-child(2):checked ~ ol {
-  background: linear-gradient(-18deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="5"] input:nth-child(2):checked ~ ol:before {
-  content: '20';
+  -webkit-transform: rotate(-18deg) translate(106px) rotate(18deg);
+  -moz-transform: rotate(-18deg) translate(106px) rotate(18deg);
+  -ms-transform: rotate(-18deg) translate(106px) rotate(18deg);
+  -o-transform: rotate(-18deg) translate(106px) rotate(18deg);
+  transform: rotate(-18deg) translate(106px) rotate(18deg);
 }
 .atomic[data-n="5"] li:nth-child(3) {
-  display: block;
-  -webkit-transform: rotate(54deg) translate(107px) rotate(-54deg);
-  -moz-transform: rotate(54deg) translate(107px) rotate(-54deg);
-  -ms-transform: rotate(54deg) translate(107px) rotate(-54deg);
-  -o-transform: rotate(54deg) translate(107px) rotate(-54deg);
-  transform: rotate(54deg) translate(107px) rotate(-54deg);
-}
-.atomic[data-n="5"] input:nth-child(3):checked ~ ol {
-  background: linear-gradient(54deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="5"] input:nth-child(3):checked ~ ol:before {
-  content: '40';
+  -webkit-transform: rotate(54deg) translate(106px) rotate(-54deg);
+  -moz-transform: rotate(54deg) translate(106px) rotate(-54deg);
+  -ms-transform: rotate(54deg) translate(106px) rotate(-54deg);
+  -o-transform: rotate(54deg) translate(106px) rotate(-54deg);
+  transform: rotate(54deg) translate(106px) rotate(-54deg);
 }
 .atomic[data-n="5"] li:nth-child(4) {
-  display: block;
-  -webkit-transform: rotate(126deg) translate(107px) rotate(-126deg);
-  -moz-transform: rotate(126deg) translate(107px) rotate(-126deg);
-  -ms-transform: rotate(126deg) translate(107px) rotate(-126deg);
-  -o-transform: rotate(126deg) translate(107px) rotate(-126deg);
-  transform: rotate(126deg) translate(107px) rotate(-126deg);
-}
-.atomic[data-n="5"] input:nth-child(4):checked ~ ol {
-  background: linear-gradient(126deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="5"] input:nth-child(4):checked ~ ol:before {
-  content: '60';
+  -webkit-transform: rotate(126deg) translate(106px) rotate(-126deg);
+  -moz-transform: rotate(126deg) translate(106px) rotate(-126deg);
+  -ms-transform: rotate(126deg) translate(106px) rotate(-126deg);
+  -o-transform: rotate(126deg) translate(106px) rotate(-126deg);
+  transform: rotate(126deg) translate(106px) rotate(-126deg);
 }
 .atomic[data-n="5"] li:nth-child(5) {
-  display: block;
-  -webkit-transform: rotate(198deg) translate(107px) rotate(-198deg);
-  -moz-transform: rotate(198deg) translate(107px) rotate(-198deg);
-  -ms-transform: rotate(198deg) translate(107px) rotate(-198deg);
-  -o-transform: rotate(198deg) translate(107px) rotate(-198deg);
-  transform: rotate(198deg) translate(107px) rotate(-198deg);
-}
-.atomic[data-n="5"] input:nth-child(5):checked ~ ol {
-  background: linear-gradient(198deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="5"] input:nth-child(5):checked ~ ol:before {
-  content: '80';
+  -webkit-transform: rotate(198deg) translate(106px) rotate(-198deg);
+  -moz-transform: rotate(198deg) translate(106px) rotate(-198deg);
+  -ms-transform: rotate(198deg) translate(106px) rotate(-198deg);
+  -o-transform: rotate(198deg) translate(106px) rotate(-198deg);
+  transform: rotate(198deg) translate(106px) rotate(-198deg);
 }
 .atomic[data-n="6"] li:nth-child(2) {
-  display: block;
-  -webkit-transform: rotate(-30deg) translate(107px) rotate(30deg);
-  -moz-transform: rotate(-30deg) translate(107px) rotate(30deg);
-  -ms-transform: rotate(-30deg) translate(107px) rotate(30deg);
-  -o-transform: rotate(-30deg) translate(107px) rotate(30deg);
-  transform: rotate(-30deg) translate(107px) rotate(30deg);
-}
-.atomic[data-n="6"] input:nth-child(2):checked ~ ol {
-  background: linear-gradient(-30deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="6"] input:nth-child(2):checked ~ ol:before {
-  content: '17';
+  -webkit-transform: rotate(-30deg) translate(106px) rotate(30deg);
+  -moz-transform: rotate(-30deg) translate(106px) rotate(30deg);
+  -ms-transform: rotate(-30deg) translate(106px) rotate(30deg);
+  -o-transform: rotate(-30deg) translate(106px) rotate(30deg);
+  transform: rotate(-30deg) translate(106px) rotate(30deg);
 }
 .atomic[data-n="6"] li:nth-child(3) {
-  display: block;
-  -webkit-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  -moz-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  -ms-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  -o-transform: rotate(30deg) translate(107px) rotate(-30deg);
-  transform: rotate(30deg) translate(107px) rotate(-30deg);
-}
-.atomic[data-n="6"] input:nth-child(3):checked ~ ol {
-  background: linear-gradient(30deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="6"] input:nth-child(3):checked ~ ol:before {
-  content: '33';
+  -webkit-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  -moz-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  -ms-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  -o-transform: rotate(30deg) translate(106px) rotate(-30deg);
+  transform: rotate(30deg) translate(106px) rotate(-30deg);
 }
 .atomic[data-n="6"] li:nth-child(4) {
-  display: block;
-  -webkit-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -moz-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -ms-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  -o-transform: rotate(90deg) translate(107px) rotate(-90deg);
-  transform: rotate(90deg) translate(107px) rotate(-90deg);
-}
-.atomic[data-n="6"] input:nth-child(4):checked ~ ol {
-  background: linear-gradient(90deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="6"] input:nth-child(4):checked ~ ol:before {
-  content: '50';
+  -webkit-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -moz-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  -o-transform: rotate(90deg) translate(106px) rotate(-90deg);
+  transform: rotate(90deg) translate(106px) rotate(-90deg);
 }
 .atomic[data-n="6"] li:nth-child(5) {
-  display: block;
-  -webkit-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  -moz-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  -ms-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  -o-transform: rotate(150deg) translate(107px) rotate(-150deg);
-  transform: rotate(150deg) translate(107px) rotate(-150deg);
-}
-.atomic[data-n="6"] input:nth-child(5):checked ~ ol {
-  background: linear-gradient(150deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="6"] input:nth-child(5):checked ~ ol:before {
-  content: '67';
+  -webkit-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  -moz-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  -ms-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  -o-transform: rotate(150deg) translate(106px) rotate(-150deg);
+  transform: rotate(150deg) translate(106px) rotate(-150deg);
 }
 .atomic[data-n="6"] li:nth-child(6) {
-  display: block;
-  -webkit-transform: rotate(210deg) translate(107px) rotate(-210deg);
-  -moz-transform: rotate(210deg) translate(107px) rotate(-210deg);
-  -ms-transform: rotate(210deg) translate(107px) rotate(-210deg);
-  -o-transform: rotate(210deg) translate(107px) rotate(-210deg);
-  transform: rotate(210deg) translate(107px) rotate(-210deg);
-}
-.atomic[data-n="6"] input:nth-child(6):checked ~ ol {
-  background: linear-gradient(210deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-n="6"] input:nth-child(6):checked ~ ol:before {
-  content: '83';
+  -webkit-transform: rotate(210deg) translate(106px) rotate(-210deg);
+  -moz-transform: rotate(210deg) translate(106px) rotate(-210deg);
+  -ms-transform: rotate(210deg) translate(106px) rotate(-210deg);
+  -o-transform: rotate(210deg) translate(106px) rotate(-210deg);
+  transform: rotate(210deg) translate(106px) rotate(-210deg);
 }
 .atomic input:nth-child(1):checked ~ ol li:nth-child(-n+0):before {
   content: '✓';
@@ -273,610 +167,10 @@
 .atomic input:nth-child(6):checked ~ ol li:nth-child(6) {
   color: #fff;
 }
-.atomic[data-v="1"] ol {
-  background: linear-gradient(-86deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="1"] ol:before {
-  content: '1';
-}
-.atomic[data-v="2"] ol {
-  background: linear-gradient(-83deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="2"] ol:before {
-  content: '2';
-}
-.atomic[data-v="3"] ol {
-  background: linear-gradient(-79deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="3"] ol:before {
-  content: '3';
-}
-.atomic[data-v="4"] ol {
-  background: linear-gradient(-76deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="4"] ol:before {
-  content: '4';
-}
-.atomic[data-v="5"] ol {
-  background: linear-gradient(-72deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="5"] ol:before {
-  content: '5';
-}
-.atomic[data-v="6"] ol {
-  background: linear-gradient(-68deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="6"] ol:before {
-  content: '6';
-}
-.atomic[data-v="7"] ol {
-  background: linear-gradient(-65deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="7"] ol:before {
-  content: '7';
-}
-.atomic[data-v="8"] ol {
-  background: linear-gradient(-61deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="8"] ol:before {
-  content: '8';
-}
-.atomic[data-v="9"] ol {
-  background: linear-gradient(-58deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="9"] ol:before {
-  content: '9';
-}
-.atomic[data-v="10"] ol {
-  background: linear-gradient(-54deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="10"] ol:before {
-  content: '10';
-}
-.atomic[data-v="11"] ol {
-  background: linear-gradient(-50deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="11"] ol:before {
-  content: '11';
-}
-.atomic[data-v="12"] ol {
-  background: linear-gradient(-47deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="12"] ol:before {
-  content: '12';
-}
-.atomic[data-v="13"] ol {
-  background: linear-gradient(-43deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="13"] ol:before {
-  content: '13';
-}
-.atomic[data-v="14"] ol {
-  background: linear-gradient(-40deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="14"] ol:before {
-  content: '14';
-}
-.atomic[data-v="15"] ol {
-  background: linear-gradient(-36deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="15"] ol:before {
-  content: '15';
-}
-.atomic[data-v="16"] ol {
-  background: linear-gradient(-32deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="16"] ol:before {
-  content: '16';
-}
-.atomic[data-v="17"] ol {
-  background: linear-gradient(-29deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="17"] ol:before {
-  content: '17';
-}
-.atomic[data-v="18"] ol {
-  background: linear-gradient(-25deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="18"] ol:before {
-  content: '18';
-}
-.atomic[data-v="19"] ol {
-  background: linear-gradient(-22deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="19"] ol:before {
-  content: '19';
-}
-.atomic[data-v="20"] ol {
-  background: linear-gradient(-18deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="20"] ol:before {
-  content: '20';
-}
-.atomic[data-v="21"] ol {
-  background: linear-gradient(-14deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="21"] ol:before {
-  content: '21';
-}
-.atomic[data-v="22"] ol {
-  background: linear-gradient(-11deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="22"] ol:before {
-  content: '22';
-}
-.atomic[data-v="23"] ol {
-  background: linear-gradient(-7deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="23"] ol:before {
-  content: '23';
-}
-.atomic[data-v="24"] ol {
-  background: linear-gradient(-4deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="24"] ol:before {
-  content: '24';
-}
-.atomic[data-v="25"] ol {
-  background: linear-gradient(0deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="25"] ol:before {
-  content: '25';
-}
-.atomic[data-v="26"] ol {
-  background: linear-gradient(4deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="26"] ol:before {
-  content: '26';
-}
-.atomic[data-v="27"] ol {
-  background: linear-gradient(7deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="27"] ol:before {
-  content: '27';
-}
-.atomic[data-v="28"] ol {
-  background: linear-gradient(11deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="28"] ol:before {
-  content: '28';
-}
-.atomic[data-v="29"] ol {
-  background: linear-gradient(14deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="29"] ol:before {
-  content: '29';
-}
-.atomic[data-v="30"] ol {
-  background: linear-gradient(18deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="30"] ol:before {
-  content: '30';
-}
-.atomic[data-v="31"] ol {
-  background: linear-gradient(22deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="31"] ol:before {
-  content: '31';
-}
-.atomic[data-v="32"] ol {
-  background: linear-gradient(25deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="32"] ol:before {
-  content: '32';
-}
-.atomic[data-v="33"] ol {
-  background: linear-gradient(29deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="33"] ol:before {
-  content: '33';
-}
-.atomic[data-v="34"] ol {
-  background: linear-gradient(32deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="34"] ol:before {
-  content: '34';
-}
-.atomic[data-v="35"] ol {
-  background: linear-gradient(36deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="35"] ol:before {
-  content: '35';
-}
-.atomic[data-v="36"] ol {
-  background: linear-gradient(40deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="36"] ol:before {
-  content: '36';
-}
-.atomic[data-v="37"] ol {
-  background: linear-gradient(43deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="37"] ol:before {
-  content: '37';
-}
-.atomic[data-v="38"] ol {
-  background: linear-gradient(47deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="38"] ol:before {
-  content: '38';
-}
-.atomic[data-v="39"] ol {
-  background: linear-gradient(50deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="39"] ol:before {
-  content: '39';
-}
-.atomic[data-v="40"] ol {
-  background: linear-gradient(54deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="40"] ol:before {
-  content: '40';
-}
-.atomic[data-v="41"] ol {
-  background: linear-gradient(58deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="41"] ol:before {
-  content: '41';
-}
-.atomic[data-v="42"] ol {
-  background: linear-gradient(61deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="42"] ol:before {
-  content: '42';
-}
-.atomic[data-v="43"] ol {
-  background: linear-gradient(65deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="43"] ol:before {
-  content: '43';
-}
-.atomic[data-v="44"] ol {
-  background: linear-gradient(68deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="44"] ol:before {
-  content: '44';
-}
-.atomic[data-v="45"] ol {
-  background: linear-gradient(72deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="45"] ol:before {
-  content: '45';
-}
-.atomic[data-v="46"] ol {
-  background: linear-gradient(76deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="46"] ol:before {
-  content: '46';
-}
-.atomic[data-v="47"] ol {
-  background: linear-gradient(79deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="47"] ol:before {
-  content: '47';
-}
-.atomic[data-v="48"] ol {
-  background: linear-gradient(83deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="48"] ol:before {
-  content: '48';
-}
-.atomic[data-v="49"] ol {
-  background: linear-gradient(86deg, #fff 50%, transparent 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="49"] ol:before {
-  content: '49';
-}
-.atomic[data-v="50"] ol {
-  background: linear-gradient(90deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="50"] ol:before {
-  content: '50';
-}
-.atomic[data-v="51"] ol {
-  background: linear-gradient(94deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="51"] ol:before {
-  content: '51';
-}
-.atomic[data-v="52"] ol {
-  background: linear-gradient(97deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="52"] ol:before {
-  content: '52';
-}
-.atomic[data-v="53"] ol {
-  background: linear-gradient(101deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="53"] ol:before {
-  content: '53';
-}
-.atomic[data-v="54"] ol {
-  background: linear-gradient(104deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="54"] ol:before {
-  content: '54';
-}
-.atomic[data-v="55"] ol {
-  background: linear-gradient(108deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="55"] ol:before {
-  content: '55';
-}
-.atomic[data-v="56"] ol {
-  background: linear-gradient(112deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="56"] ol:before {
-  content: '56';
-}
-.atomic[data-v="57"] ol {
-  background: linear-gradient(115deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="57"] ol:before {
-  content: '57';
-}
-.atomic[data-v="58"] ol {
-  background: linear-gradient(119deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="58"] ol:before {
-  content: '58';
-}
-.atomic[data-v="59"] ol {
-  background: linear-gradient(122deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="59"] ol:before {
-  content: '59';
-}
-.atomic[data-v="60"] ol {
-  background: linear-gradient(126deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="60"] ol:before {
-  content: '60';
-}
-.atomic[data-v="61"] ol {
-  background: linear-gradient(130deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="61"] ol:before {
-  content: '61';
-}
-.atomic[data-v="62"] ol {
-  background: linear-gradient(133deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="62"] ol:before {
-  content: '62';
-}
-.atomic[data-v="63"] ol {
-  background: linear-gradient(137deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="63"] ol:before {
-  content: '63';
-}
-.atomic[data-v="64"] ol {
-  background: linear-gradient(140deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="64"] ol:before {
-  content: '64';
-}
-.atomic[data-v="65"] ol {
-  background: linear-gradient(144deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="65"] ol:before {
-  content: '65';
-}
-.atomic[data-v="66"] ol {
-  background: linear-gradient(148deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="66"] ol:before {
-  content: '66';
-}
-.atomic[data-v="67"] ol {
-  background: linear-gradient(151deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="67"] ol:before {
-  content: '67';
-}
-.atomic[data-v="68"] ol {
-  background: linear-gradient(155deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="68"] ol:before {
-  content: '68';
-}
-.atomic[data-v="69"] ol {
-  background: linear-gradient(158deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="69"] ol:before {
-  content: '69';
-}
-.atomic[data-v="70"] ol {
-  background: linear-gradient(162deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="70"] ol:before {
-  content: '70';
-}
-.atomic[data-v="71"] ol {
-  background: linear-gradient(166deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="71"] ol:before {
-  content: '71';
-}
-.atomic[data-v="72"] ol {
-  background: linear-gradient(169deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="72"] ol:before {
-  content: '72';
-}
-.atomic[data-v="73"] ol {
-  background: linear-gradient(173deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="73"] ol:before {
-  content: '73';
-}
-.atomic[data-v="74"] ol {
-  background: linear-gradient(176deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="74"] ol:before {
-  content: '74';
-}
-.atomic[data-v="75"] ol {
-  background: linear-gradient(180deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="75"] ol:before {
-  content: '75';
-}
-.atomic[data-v="76"] ol {
-  background: linear-gradient(184deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="76"] ol:before {
-  content: '76';
-}
-.atomic[data-v="77"] ol {
-  background: linear-gradient(187deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="77"] ol:before {
-  content: '77';
-}
-.atomic[data-v="78"] ol {
-  background: linear-gradient(191deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="78"] ol:before {
-  content: '78';
-}
-.atomic[data-v="79"] ol {
-  background: linear-gradient(194deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="79"] ol:before {
-  content: '79';
-}
-.atomic[data-v="80"] ol {
-  background: linear-gradient(198deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="80"] ol:before {
-  content: '80';
-}
-.atomic[data-v="81"] ol {
-  background: linear-gradient(202deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="81"] ol:before {
-  content: '81';
-}
-.atomic[data-v="82"] ol {
-  background: linear-gradient(205deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="82"] ol:before {
-  content: '82';
-}
-.atomic[data-v="83"] ol {
-  background: linear-gradient(209deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="83"] ol:before {
-  content: '83';
-}
-.atomic[data-v="84"] ol {
-  background: linear-gradient(212deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="84"] ol:before {
-  content: '84';
-}
-.atomic[data-v="85"] ol {
-  background: linear-gradient(216deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="85"] ol:before {
-  content: '85';
-}
-.atomic[data-v="86"] ol {
-  background: linear-gradient(220deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="86"] ol:before {
-  content: '86';
-}
-.atomic[data-v="87"] ol {
-  background: linear-gradient(223deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="87"] ol:before {
-  content: '87';
-}
-.atomic[data-v="88"] ol {
-  background: linear-gradient(227deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="88"] ol:before {
-  content: '88';
-}
-.atomic[data-v="89"] ol {
-  background: linear-gradient(230deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="89"] ol:before {
-  content: '89';
-}
-.atomic[data-v="90"] ol {
-  background: linear-gradient(234deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="90"] ol:before {
-  content: '90';
-}
-.atomic[data-v="91"] ol {
-  background: linear-gradient(238deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="91"] ol:before {
-  content: '91';
-}
-.atomic[data-v="92"] ol {
-  background: linear-gradient(241deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="92"] ol:before {
-  content: '92';
-}
-.atomic[data-v="93"] ol {
-  background: linear-gradient(245deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="93"] ol:before {
-  content: '93';
-}
-.atomic[data-v="94"] ol {
-  background: linear-gradient(248deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="94"] ol:before {
-  content: '94';
-}
-.atomic[data-v="95"] ol {
-  background: linear-gradient(252deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="95"] ol:before {
-  content: '95';
-}
-.atomic[data-v="96"] ol {
-  background: linear-gradient(256deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="96"] ol:before {
-  content: '96';
-}
-.atomic[data-v="97"] ol {
-  background: linear-gradient(259deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="97"] ol:before {
-  content: '97';
-}
-.atomic[data-v="98"] ol {
-  background: linear-gradient(263deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="98"] ol:before {
-  content: '98';
-}
-.atomic[data-v="99"] ol {
-  background: linear-gradient(266deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="99"] ol:before {
-  content: '99';
-}
-.atomic[data-v="100"] ol {
-  background: linear-gradient(270deg, transparent 50%, #16a085 0), linear-gradient(90deg, #fff 50%, #16a085 0), #fff;
-}
-.atomic[data-v="100"] ol:before {
-  content: '100';
-}
-.atomic[data-v] ol {
+.atomic ol {
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 14px solid #2ecc71;
+  border: 12px solid #2ecc71;
   height: 200px;
   list-style: none;
   margin: 0 auto;
@@ -885,43 +179,54 @@
   text-align: center;
   width: 200px;
 }
-.atomic[data-v] ol:before {
+.atomic ol:before {
   background-color: #16a085;
   border-radius: 50%;
+  content: '54';
   color: #fff;
-  font-size: 29px;
-  height: 47px;
+  font-size: 40px;
+  padding-top: 20px;
+  height: 73px;
   left: 50%;
-  margin: -31px;
+  margin: -46px;
   position: absolute;
   top: 50%;
-  width: 62px;
-  padding-top: 15px;
-}
-.atomic li,
-.atomic li:before {
-  left: 50%;
-  margin: -31px;
-  position: absolute;
-  top: 50%;
+  width: 93px;
 }
 .atomic li {
   background-color: #2ecc71;
   border-radius: 50%;
-  color: #16a085;
   height: 62px;
+  left: 50%;
+  margin: -31px;
+  position: absolute;
+  top: 50%;
   width: 62px;
 }
 .atomic li:before {
   content: counter(atomic);
   counter-increment: atomic;
   font-size: 20px;
-  margin: -12px 0 0 -6px;
+  text-align: center;
+  margin-top: 21px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 62px;
   z-index: -1;
 }
 .atomic li:hover label {
   cursor: pointer;
   display: block;
+}
+.atomic canvas {
+  border-radius: 50%;
+  height: 224px;
+  left: 31px;
+  position: absolute;
+  top: 31px;
+  width: 224px;
+  z-index: -1;
 }
 .atomic label {
   display: none;
