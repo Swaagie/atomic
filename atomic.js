@@ -18,14 +18,14 @@
     , ψ = 2 * π / 100
     , vendor;
 
-  while(!Atomic.raf && (vendor = vendors.pop())) {
-    Atomic.raf = w[vendor + 'RequestAnimationFrame'];
-    Atomic.caf = w[vendor + 'CancelAnimationFrame']
+  while(!w.requestAnimationFrame && (vendor = vendors.pop())) {
+    w.requestAnimationFrame = w[vendor + 'RequestAnimationFrame'];
+    w.cancelAnimationFrame = w[vendor + 'CancelAnimationFrame']
      || w[vendor+'CancelRequestAnimationFrame'];
   }
 
-  if (!Atomic.raf) {
-    Atomic.raf = function raf(callback) {
+  if (!w.requestAnimationFrame) {
+    w.requestAnimationFrame = function requestAnimationFrame(callback) {
       var currentTime = Date.now()
         , adjustedDelay = 16 - (currentTime - expectedTime)
         , delay = adjustedDelay > 0 ? adjustedDelay : 0;
@@ -37,9 +37,7 @@
     };
   }
 
-  if (!Atomic.caf) Atomic.caf = clearTimeout;
-  Atomic.raf = Atomic.raf.bind(w);
-  Atomic.caf = Atomic.caf.bind(w);
+  if (!w.cancelAnimationFrame) w.cancelAnimationFrame = clearTimeout;
 
   /**
    * Small helper function to set attributes on created elements.
@@ -97,10 +95,10 @@
       ctx.fill();
 
       // stop calling render as soon as steps are done or if equal to end.
-      if (λ++ < steps && r2 !== β) Atomic.raf(render);
+      if (λ++ < steps && r2 !== β) w.requestAnimationFrame(render);
     }
 
-    Atomic.raf(render);
+    w.requestAnimationFrame(render);
   };
 
   Atomic.update = function update(end) {
