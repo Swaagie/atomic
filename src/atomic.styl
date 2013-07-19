@@ -111,6 +111,7 @@ divide(a,b)
       text-align: center
       top: 0
       width: electron
+      z-index: -1
 
     &:hover label
       cursor: pointer
@@ -125,10 +126,9 @@ divide(a,b)
     position: absolute
     top:  round((total - ref) / 2)
     width: ref
-    z-index: -1
 
   label
-    display: none
-    height: 100%
+    display: block
+    height: electron
     text-indent: -9999px
-    width: 100%
+    width: electron
