@@ -48,7 +48,7 @@
     this.ctx = canvas.getContext('2d');
     this.color = getComputedStyle(atom).getPropertyValue('color');
     this.text = atom.getElementsByTagName('input')[0];
-    this.value = +this.text.value;
+    this.value = 0;
 
     // Some defaults required for the animations
     this.r = +size.replace('px', '') / 2;
@@ -59,7 +59,7 @@
     canvas.setAttribute('height', size);
 
     // Initialize and start the animation cycle for the first time.
-    this.initialize(atom).animate(0, this.value);
+    this.initialize(atom).animate(this.value, +this.text.value);
   }
 
   /**
@@ -132,7 +132,7 @@
     var self = this
       , cw = end > start ? 1 : -1
       , π = Math.PI
-      , Δ = π / 40 * cw
+      , Δ = this.ψ * cw
       , θ = Δ / 2
       , α = π / -2 + this.ψ * start
       , β = π / -2 + this.ψ * end
@@ -164,15 +164,18 @@
       ctx.closePath();
       ctx.fill();
 
+      // Update the current value to reflect the running endpoint of the animation.
+      self.value = start + 1 * cw + λ++ * cw;
+
       // stop calling render as soon as steps are done or if equal to end.
-      if (λ++ < steps && r2 !== β) self.id = w.requestAnimationFrame(render);
+      if (λ < steps && r2 !== β) self.id = w.requestAnimationFrame(render);
     }
 
     this.id = w.requestAnimationFrame(render);
   };
 
   /**
-   * Change the current value of the progress bar
+   * Change the current value of the progress bar and selected radio buttons.
    *
    * @param {Number} end
    * @returns {Atomic} fluent interface
@@ -192,7 +195,7 @@
 
     // Stop running animations and start fresh one.
     w.cancelAnimationFrame(this.id);
-    this.animate(this.value, this.value = end);
+    this.animate(this.value, end);
 
     return this;
   };
