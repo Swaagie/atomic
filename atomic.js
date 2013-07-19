@@ -40,51 +40,69 @@
    * @api public
    */
   function Atomic(atom) {
-    var electrons = atom.getElementsByTagName('li')
-      , text = atom.getElementsByTagName('input')[0]
-      , canvas = atom.getElementsByTagName('canvas')[0]
+    var canvas = atom.getElementsByTagName('canvas')[0]
       , size = getComputedStyle(canvas).getPropertyValue('width')
-      , i = electrons.length
-      , n = 100 / i
-      , π = Math.PI
-      , element;
+      , π = Math.PI;
 
     // Set some properties for the canvas to work with.
     this.ctx = canvas.getContext('2d');
     this.color = getComputedStyle(atom).getPropertyValue('color');
-    this.value = +text.value;
+    this.text = atom.getElementsByTagName('input')[0];
+    this.value = +this.text.value;
 
     // Some defaults required for the animations
     this.r = +size.replace('px', '') / 2;
     this.ψ = π / 50;
-    this.top = π / -2;
 
-    // Attach onChange listeners to each input element
-    text.addEventListener('change', this.listen.bind(this));
+    // Set height and width on the canvas.
+    canvas.setAttribute('width', size);
+    canvas.setAttribute('height', size);
+
+    // Initialize and start the animation cycle for the first time.
+    this.initialize(atom).animate(0, this.value);
+  }
+
+  /**
+   * Initialize event listeners and add input elements.
+   *
+   * @param {Element} atom
+   * @returns {Atomic} fluent interface
+   * @api private
+   */
+  Atomic.prototype.initialize = function initialize(atom) {
+    var electrons = atom.getElementsByTagName('li')
+      , attributes = { type: 'radio', name: 'atomic' }
+      , element, step, checked, n, i;
+
+    // Attach onChange listeners to the text element
+    this.text.addEventListener('change', this.listen.bind(this));
+
+    // Step size and radio buttons.
+    this.i = i = electrons.length;
+    this.n = n = 100 / i;
+    this.radio = [];
 
     // Set data-n on section to #list items.
     atom.setAttribute('data-n', i);
 
     // Add radiobuttons and listen to any clicks on the labels
     while (i--) {
-      element = document.createElement('input');
+      this.radio.unshift(element = document.createElement('input'));
       element.addEventListener('click', this.listen.bind(this));
 
-      atom.insertBefore(this.setAttributes(
-          element
-        , { type: 'radio', id: 'i' + i, name: 's', value: n * i}
-      ), atom.firstChild);
+      step = n * i;
+      checked = step - this.value;
 
+      attributes.id = 'i' + i;
+      attributes.value = step;
+      element.checked = checked > 0 && checked <= n;
+
+      atom.insertBefore(this.setAttributes(element, attributes), atom.firstChild);
       electrons[i].getElementsByTagName('label')[0].setAttribute('for', 'i' + i);
     }
 
-    // Set height and width on the canvas.
-    canvas.setAttribute('width', size);
-    canvas.setAttribute('height', size);
-
-    // Start the animation cycle for the first time.
-    this.animate(0, this.value);
-  }
+    return this;
+  };
 
   /**
    * Small helper function to set attributes on created elements.
@@ -116,20 +134,20 @@
       , π = Math.PI
       , Δ = π / 40 * cw
       , θ = Δ / 2
-      , α = this.top + this.ψ * start
-      , β = this.top + this.ψ * end
+      , α = π / -2 + this.ψ * start
+      , β = π / -2 + this.ψ * end
       , steps = Math.abs(Math.ceil((β - α) / Δ))
       , ctx = this.ctx
       , r = this.r
       , λ = 0;
 
     /**
-     * Render each slice
+     * Render each slice.
      *
      * @api private
      */
     function render() {
-      var corr = α !== self.top || λ ? θ : 0
+      var corr = (start && start !== 100) || λ ? θ : 0
         , r1 = α + λ * Δ - corr
         , r2 = r1 + corr + Δ;
 
@@ -161,7 +179,16 @@
    * @api public
    */
   Atomic.prototype.update = function update(end) {
-    if (end === this.value || end > 100) return this;
+    if (end === this.value) return this;
+    if (end > 100) end = 100;
+
+    // Which radio button should be selected.
+    var current = Math.floor(end / this.n)
+      , max = this.i - 1;
+
+    // Update the input value and selected radio button.
+    this.text.value = end;
+    this.radio[current < max ? current : max].checked = true;
 
     // Stop running animations and start fresh one.
     w.cancelAnimationFrame(this.id);
@@ -186,6 +213,9 @@
   // Initialize each progress bar on the page.
   var atoms = document.getElementsByClassName('atomic');
   for (var k = 0; k < atoms.length; k++) {
-    initAtomic[k] = new Atomic(atoms[k]);
+    Atomic[k] = new Atomic(atoms[k]);
   }
+
+  // Expose constructor and current instances to window.
+  w.Atomic = Atomic;
 })(window);
