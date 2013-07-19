@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Atomic : HTML5 circular progress indicator" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Atomic</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Swaagie/atomic">View on GitHub</a>
+
+          <h1 id="project_title">Atomic</h1>
+          <h2 id="project_tagline">HTML5 circular progress indicator</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Swaagie/atomic/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Swaagie/atomic/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="atomic" class="anchor" href="#atomic"><span class="octicon octicon-link"></span></a>Atomic</h1>
+
+<p>Atomic is a HTML5 progress circular progress bar. The idea is to do this with
+minimal use of DOM elements, CSS and JS. This progress bar will be used by the
+getting started pages of <a href="https://www.nodejitsu.com/">Nodejitsu</a> and
+<a href="https://observe.it">observe.it</a>.</p>
+
+<h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h3>
+
+<p>Atomic works by combining CSS sibling power with the animation capacties of the
+HTML5 <code>canvas</code> element. To use Atomic include the html below and make sure to
+add the CSS and JS assets. The example below will generate a progress bar with 5
+steps. Removing or adding list items will adjust the progress bar accordingly.</p>
+
+<p><img src="demo/atomic.png" alt="Atomic"></p>
+
+<div class="highlight"><pre>  <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">atomic</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">text</span> <span class="na">value=</span><span class="s">54</span> <span class="na">size=</span><span class="s">3</span> <span class="na">maxlength=</span><span class="s">3</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;ol&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;label&gt;&lt;/label&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;label&gt;&lt;/label&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;label&gt;&lt;/label&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;label&gt;&lt;/label&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;label&gt;&lt;/label&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+
+    <span class="nt">&lt;canvas&gt;&lt;/canvas&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+</pre></div>
+
+<p>The required CSS and JS assets are small.</p>
+
+<ul>
+<li>
+<strong>atomic.min.js</strong> compressed: 2.4kB minified, 1.1kB gzipped</li>
+<li>
+<strong>atomic.min.css</strong> compressed: 8kB minified, 1.1kB gzipped.</li>
+</ul><h3>
+<a name="live-demo" class="anchor" href="#live-demo"><span class="octicon octicon-link"></span></a>Live Demo</h3>
+
+<p>Changing the value of the input will animate the progress inidicator and select
+the proper step alongside. A demonstration can be found on the demo page.</p>
+
+<h3>
+<a name="browser-support" class="anchor" href="#browser-support"><span class="octicon octicon-link"></span></a>Browser support</h3>
+
+<p>Latest chrome, safari, firefox and IE9+</p>
+
+<h3>
+<a name="tests" class="anchor" href="#tests"><span class="octicon octicon-link"></span></a>Tests</h3>
+
+<p>TODO</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Atomic maintained by <a href="https://github.com/Swaagie">Swaagie</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
