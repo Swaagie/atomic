@@ -129,7 +129,7 @@
      * @api private
      */
     function render() {
-      var corr = α !== top || λ ? θ : 0
+      var corr = α !== self.top || λ ? θ : 0
         , r1 = α + λ * Δ - corr
         , r2 = r1 + corr + Δ;
 
