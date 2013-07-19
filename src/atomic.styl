@@ -45,7 +45,7 @@ divide(a,b)
     text-align: center
     top: 50%
     width: cntr
-    z-index: 1
+    z-index: 2
 
   /* calculate the positions for each atom */
   &[data-n] li:nth-child(1)
@@ -76,6 +76,7 @@ divide(a,b)
     position: relative
     text-align: center
     width: size
+    z-index: 1
 
     &:before
       cntr = electron * 1.5
@@ -110,7 +111,6 @@ divide(a,b)
       text-align: center
       top: 0
       width: electron
-      z-index: -1
 
     &:hover label
       cursor: pointer
