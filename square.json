@@ -1,0 +1,14 @@
+{
+  "configuration": {
+    "dist": "atomic.{type}.{ext}",
+    "distribution": [ "min" ]
+  },
+  "bundle": {
+    "development/atomic.js": {
+      "description": "Small initialisation script and animation for the canvas"
+    },
+    "development/atomic.styl": {
+      "description": "Styling for the progress bar"
+    }
+  }
+}
