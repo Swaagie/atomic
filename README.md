@@ -12,7 +12,7 @@ HTML5 `canvas` element. To use Atomic include the html below and make sure to
 add the CSS and JS assets. The example below will generate a progress bar with 5
 steps. Removing or adding list items will adjust the progress bar accordingly.
 
-![Atomic](demo/atomic.png)
+![Atomic](https://github.com/Swaagie/atomic/blob/master/demo/atomic.png)
 
 ```html
   <section class=atomic>
@@ -38,7 +38,7 @@ The required CSS and JS assets are small.
 
 Changing the value of the input will animate the progress inidicator and select
 the proper step alongside. A demonstration can be found on the
-[demo page](http://swaagie.github.io/atomic).
+[demo page](http://www.martijnswaagman.nl/atomic/).
 
 ### Browser support
 
