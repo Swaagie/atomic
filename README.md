@@ -37,7 +37,8 @@ The required CSS and JS assets are small.
 ### Live Demo
 
 Changing the value of the input will animate the progress inidicator and select
-the proper step alongside. A demonstration can be found on the demo page.
+the proper step alongside. A demonstration can be found on the
+[demo page](http://swaagie.github.io/atomic).
 
 ### Browser support
 
