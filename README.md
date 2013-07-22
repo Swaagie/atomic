@@ -19,8 +19,8 @@ actual inclusion.
 ![Atomic](https://raw.github.com/Swaagie/atomic/master/demo/atomic.png)
 
 ```html
-  <section class=atomic>
-    <input type=text value=54 size=3 maxlength=3>
+  <section class="atomic">
+    <input type="text" value="54" size="3" maxlength="3">
 
     <ol>
       <li><label></label></li>
