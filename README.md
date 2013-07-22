@@ -1,7 +1,7 @@
 # Atomic
 
-Atomic is a HTML5 progress circular progress bar. The idea is to do this with
-minimal use of DOM elements, CSS and JS. This progress bar will be used by the
+Atomic is a HTML5 circular progress bar. It functions with
+minimal use of DOM elements, CSS and JS. Atomic will be used by the
 getting started pages of [Nodejitsu](https://www.nodejitsu.com/) and
 [observe.it](https://observe.it).
 
