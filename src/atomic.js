@@ -168,7 +168,11 @@
       self.value = start + 1 * cw + λ++ * cw;
 
       // stop calling render as soon as steps are done or if equal to end.
-      if (λ < steps && r2 !== β) self.id = w.requestAnimationFrame(render);
+      if (λ < steps && r2 !== β) return self.id = w.requestAnimationFrame(render);
+
+      // If complet animation is rendered make sure the value is the provided end.
+      // This will fix some rendering artifacts due to rounding errors.
+      self.value = end;
     }
 
     this.id = w.requestAnimationFrame(render);
@@ -190,7 +194,8 @@
       , max = this.i - 1;
 
     // Update the input value and selected radio button.
-    this.text.value = Math.round(end);
+    end = Math.round(end);
+    this.text.value = end;
     this.radio[current < max ? current : max].checked = true;
 
     // Stop running animations and start fresh one.
