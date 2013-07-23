@@ -190,7 +190,7 @@
       , max = this.i - 1;
 
     // Update the input value and selected radio button.
-    this.text.value = end;
+    this.text.value = Math.round(end);
     this.radio[current < max ? current : max].checked = true;
 
     // Stop running animations and start fresh one.
