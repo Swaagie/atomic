@@ -1,7 +1,8 @@
 ## Changelog
 
-### 1.2.0
+### 1.1.1
 - round the numbers displayed in the input
+- proper checked radio button on initialization
 
 ### 1.1.0
 - animated electrons/steps

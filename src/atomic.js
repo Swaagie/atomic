@@ -91,7 +91,7 @@
       element.addEventListener('click', this.listen.bind(this));
 
       step = n * i;
-      checked = step - this.value;
+      checked = step - this.text.value;
 
       attributes.id = 'i' + i;
       attributes.value = step;
