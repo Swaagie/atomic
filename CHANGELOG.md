@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.1.3
+- fix relative positioning for firefox
+- checked functioning against firefox, opera, chrome, chromium, safari
+
 ### 1.1.2
 - fix rendering artifacts due to rounding errors
 
