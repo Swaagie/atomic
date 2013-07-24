@@ -6,6 +6,9 @@
     "src/atomic.js": {
       "description": "Small initialisation script and animation for the canvas"
     },
+    "src/defaults.styl": {
+      "description": "Changable variables to easily customize Atomic"
+    },
     "src/atomic.styl": {
       "description": "Styling for the progress bar"
     }

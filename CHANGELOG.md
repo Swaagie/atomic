@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.3.0
+- Move defaults to external file for easy customization
+
 ### 1.2.0
 - Increase maximum number of steps to 9
 - Calculate electron/step size by 2 * golden ratio
