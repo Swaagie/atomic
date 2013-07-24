@@ -10,7 +10,8 @@
       "description": "Changable variables to easily customize Atomic"
     },
     "src/atomic.styl": {
-      "description": "Styling for the progress bar"
+      "description": "Styling for the progress bar",
+      "dependencies": [ "src/defaults.styl" ]
     }
   }
 }
