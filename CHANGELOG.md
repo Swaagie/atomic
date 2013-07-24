@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.2.0
+- Increase maximum number of steps to 9
+- Calculate electron/step size by 2 * golden ratio
+
 ### 1.1.3
 - fix relative positioning for firefox
 - checked functioning against firefox, opera, chrome, chromium, safari

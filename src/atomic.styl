@@ -1,9 +1,10 @@
 /* dimensions of elements */
 size = 160px
-electron = round(size / 3.236067978)
+electron = round(size / (1 + 5 ** .5))
 orbital = round(size / 17)
 font = round(size / 10)
 total = size + 2 * orbital
+n = 9
 
 /* colors */
 border = #1AAC9C
@@ -50,7 +51,7 @@ divide(a,b)
   &[data-n] li:nth-child(1)
     divide(180, 1)
 
-  for i in 1..6
+  for i in 1..n
     &[data-n={'"' + i + '"'}]
       for step in (2..i)
         li:nth-child({step})
