@@ -1,4 +1,4 @@
-(function initAtomic(w) {
+(function initAtomic(w, d) {
   'use strict';
 
   /**
@@ -87,7 +87,7 @@
 
     // Add radiobuttons and listen to any clicks on the labels
     while (i--) {
-      this.radio.unshift(element = document.createElement('input'));
+      this.radio.unshift(element = d.createElement('input'));
       element.addEventListener('click', this.listen.bind(this));
 
       step = n * i;
@@ -219,11 +219,11 @@
   };
 
   // Initialize each progress bar on the page.
-  var atoms = document.getElementsByClassName('atomic');
+  var atoms = d.getElementsByClassName('atomic');
   for (var k = 0; k < atoms.length; k++) {
     Atomic[k] = new Atomic(atoms[k]);
   }
 
   // Expose constructor and current instances to window.
   w.Atomic = Atomic;
-})(window);
+})(window, document);
