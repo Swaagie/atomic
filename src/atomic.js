@@ -95,7 +95,7 @@
 
       attributes.id = 'i' + i;
       attributes.value = step;
-      element.checked = checked > 0 && checked <= n;
+      element.checked = checked > 0 && checked <= n && +this.text.value;
 
       atom.insertBefore(this.setAttributes(element, attributes), atom.firstChild);
       electrons[i].getElementsByTagName('label')[0].setAttribute('for', 'i' + i);

@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.3.1
+- Unchecked first step if the progress is 0
+
 ### 1.3.0
 - Move defaults to external file for easy customization
 
