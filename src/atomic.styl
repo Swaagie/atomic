@@ -1,7 +1,12 @@
 /* move circles along the edge */
 divide(a,b)
+  a = round(a)
   p = (a * b) - (90 + a)deg
   transform: rotate(p) translate(size / 2 + orbital / 2) rotate(-1 * p)
+
+/* hide radio controls input steps */
+input[name=atomic]
+  display: none
 
 /* define styleset, restricted to atomic */
 .atomic
@@ -12,10 +17,6 @@ divide(a,b)
   margin: (electron / 2)
   position: relative
   width: total
-
-  /* hide radio controls input steps */
-  input[type=radio]
-    display: none
 
   input[type=text]
     cntr = electron
@@ -45,16 +46,17 @@ divide(a,b)
         li:nth-child({step})
           divide(360 / i, step)
 
-    input:nth-child({i}):checked
-      & ~ ol
-        li:nth-child(-n+{i - 1}):before
-          content: '✓'
+    if !external
+      input:nth-child({i}):checked
+        & ~ ol
+          li:nth-child(-n+{i - 1}):before
+            content: '✓'
 
-        li:hover:before
-          content: ''
+          li:hover:before
+            content: ''
 
-        li:nth-child({i})
-          color: white
+          li:nth-child({i})
+            color: white
 
   ol
     background-repeat: no-repeat
@@ -114,6 +116,7 @@ divide(a,b)
         display: table-cell
 
       &:before
+        content: ''
         height: 0
         visibility: hidden
         width: 0

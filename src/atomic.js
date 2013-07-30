@@ -37,9 +37,10 @@
    *
    * @Constructor
    * @param {Element} atom
+   * @param {Element} parent attach progress radio's to specific element
    * @api public
    */
-  function Atomic(atom) {
+  function Atomic(atom, parent) {
     var canvas = atom.getElementsByTagName('canvas')[0]
       , size = getComputedStyle(canvas).getPropertyValue('width')
       , π = Math.PI;
@@ -49,6 +50,7 @@
     this.color = getComputedStyle(atom).getPropertyValue('color');
     this.text = atom.getElementsByTagName('input')[0];
     this.value = 0;
+    this.parent = parent || atom;
 
     // Some defaults required for the animations
     this.r = +size.replace('px', '') / 2;
@@ -97,7 +99,7 @@
       attributes.value = step;
       element.checked = checked > 0 && checked <= n && +this.text.value;
 
-      atom.insertBefore(this.setAttributes(element, attributes), atom.firstChild);
+      this.parent.insertBefore(this.setAttributes(element, attributes), this.parent.firstChild);
       electrons[i].getElementsByTagName('label')[0].setAttribute('for', 'i' + i);
     }
 

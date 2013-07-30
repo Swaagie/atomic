@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.3.2
+- Fix label content positioning on hover if unchecked
+- Allow radio's to exist outside atomic with external flag
+
 ### 1.3.1
 - Unchecked first step if the progress is 0
 
