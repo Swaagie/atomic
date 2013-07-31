@@ -1,9 +1,10 @@
 /* move circles along the edge */
 divide(a, n)
-  r = size / 2
+  c = size / 2
+  r = size / 2 + orbital / 2
   t = (PI / -2) + 2 * PI / a * (n - 1)
-  left: round(r * cos(t)) + r
-  top: round(r * sin(t)) + r
+  left: round(r * cos(t)) + c
+  top: round(r * sin(t)) + c
 
 /* hide radio controls input steps */
 input[name=atomic]
@@ -86,11 +87,8 @@ input[name=atomic]
     background-color: border
     border-radius: 50%
     height: electron
-    left: 50%
     margin: round(electron / -2)
     position: absolute
-    top: 50%
-    transition: transform .3s ease
     width: electron
 
     &:before
@@ -107,7 +105,7 @@ input[name=atomic]
     &:hover
       height: @height * 1.5
       margin: @margin * 1.5
-      transition: all .3s ease
+      transition: all .3s ease-out
       width: @height
 
       label
