@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.4.0
+- Calculate circular positions instead of transforming
+
 ### 1.3.2
 - Fix label content positioning on hover if unchecked
 - Allow radio's to exist outside atomic with external flag

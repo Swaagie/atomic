@@ -1,8 +1,9 @@
 /* move circles along the edge */
-divide(a,b)
-  a = round(a)
-  p = (a * b) - (90 + a)deg
-  transform: rotate(p) translate(size / 2 + orbital / 2) rotate(-1 * p)
+divide(a, n)
+  r = size / 2
+  t = (PI / -2) + 2 * PI / a * (n - 1)
+  left: round(r * cos(t)) + r
+  top: round(r * sin(t)) + r
 
 /* hide radio controls input steps */
 input[name=atomic]
@@ -37,14 +38,11 @@ input[name=atomic]
     z-index: 2
 
   /* calculate the positions for each atom */
-  &[data-n] li:nth-child(1)
-    divide(180, 1)
-
   for i in 1..n
     &[data-n={'"' + i + '"'}]
-      for step in (2..i)
+      for step in (1..i)
         li:nth-child({step})
-          divide(360 / i, step)
+          divide(i, step)
 
     if !external
       input:nth-child({i}):checked
