@@ -37,8 +37,8 @@ could be used to display a title for instance.
 ```
 
 The required CSS and JS assets are small.
- - **atomic.min.js** compressed: 2.4kB minified, 1.1kB gzipped
- - **atomic.min.css** compressed: 8kB minified, 1.1kB gzipped.
+ - **atomic.min.js** compressed: 2.5kB minified, 1.1kB gzipped
+ - **atomic.min.css** compressed: 6.1kB minified, 1.1kB gzipped.
 
 [font]: http://www.google.com/fonts#UsePlace:use/Collection:Montserrat
 
