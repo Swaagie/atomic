@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Atomic progress indicator</title>
-    <link href="../atomic.min.css" rel="stylesheet">
+    <link href="../dist/atomic.dev.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <body>
     <h1 style="font-family: Montserrat">Atomic progress</h1>
 
     <!-- Progress bar -->
-    <section class="atomic">
+    <section data-atomic>
       <input type="text" value="54" size="3" maxlength="3">
 
       <ol>
-        <li><label>Step 1</label></li>
+        <li><label>First label</label></li>
         <li><label>More descriptive</label></li>
         <li><label>labels are fun</label></li>
         <li><label>Nice steps</label></li>
@@ -23,7 +23,7 @@
       </ol>
 
       <canvas></canvas>
-      <script src="../atomic.min.js"></script>
+      <script src="bundle.js"></script>
     </section>
   </body>
 </html>

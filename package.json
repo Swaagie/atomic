@@ -1,13 +1,24 @@
 {
   "name": "atomic",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Atomic progress bar",
-  "main": "src/atomic.js",
+  "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "compile": "NODE_ENV=production node_modules/.bin/gulp",
+    "compile-dev": "node_modules/.bin/gulp",
+    "demo": "node_modules/.bin/browserify demo/demo.js -o demo/bundle.js"
   },
   "devDependencies": {
-    "square": "git://github.com/observing/square.git#development"
+    "browserify": "5.9.x",
+    "gulp": "3.8.x",
+    "gulp-browserify": "^0.5.0",
+    "gulp-concat": "2.3.x",
+    "gulp-minify-css": "0.3.x",
+    "gulp-sourcemaps": "1.1.x",
+    "gulp-stylus": "1.3.x",
+    "gulp-uglify": "0.3.x",
+    "nib": "1.0.x"
   },
   "repository": {
     "type": "git",

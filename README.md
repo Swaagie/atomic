@@ -1,9 +1,22 @@
-# Atomic
+# Atomic.js
 
 Atomic is a HTML5 circular progress bar. It functions with
 minimal use of DOM elements, CSS and JS. Atomic will be used by the
 getting started pages of [Nodejitsu](https://www.nodejitsu.com/) and
 [observe.it](https://observe.it).
+
+### Installation
+
+To include atomic.js in your project, include it in your [browserify] build.
+For standalone usage gulp builds are available to create minified and
+obfuscated output.
+
+```bash
+npm run-script compile       # create minified and smallest assets
+npm run-script compile-dev   # to compile dev dependencies with sourcemaps included
+```
+
+[browserify]: http://browserify.org/
 
 ### How to use
 

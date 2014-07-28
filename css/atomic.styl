@@ -1,3 +1,5 @@
+@import defaults
+
 /* move circles along the edge */
 divide(a, n)
   c = size / 2
@@ -11,7 +13,7 @@ input[name=atomic]
   display: none
 
 /* define styleset, restricted to atomic */
-.atomic
+[data-atomic]
   color: inner
   counter-reset: atomic
   font-family: Montserrat,Helvetica
@@ -107,7 +109,7 @@ input[name=atomic]
     &:hover
       height: @height * 1.5
       margin: @margin * 1.5
-      transition: all .3s ease-out
+      transition: all .3s ease-out-in
       width: @height
 
       label

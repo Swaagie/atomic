@@ -1,5 +1,9 @@
 ## Changelog
 
+### 2.0.0
+- Add browserify build
+- Defer initialization to init script
+
 ### 1.4.0
 - Calculate circular positions instead of transforming
 
