@@ -12,7 +12,6 @@
   "devDependencies": {
     "browserify": "5.9.x",
     "gulp": "3.8.x",
-    "gulp-browserify": "^0.5.0",
     "gulp-concat": "2.3.x",
     "gulp-minify-css": "0.3.x",
     "gulp-sourcemaps": "1.1.x",
