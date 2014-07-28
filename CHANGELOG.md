@@ -2,6 +2,7 @@
 
 ### 2.0.0
 - Add browserify build
+- Use gulp to build the files in stead of Square
 - Defer initialization to init script
 
 ### 1.4.0
