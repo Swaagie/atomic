@@ -1,5 +1,7 @@
 # Atomic.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Swaagie/atomic.svg)](https://greenkeeper.io/)
+
 Atomic is a HTML5 circular progress bar. It functions with
 minimal use of DOM elements, CSS and JS. Atomic will be used by the
 getting started pages of [Nodejitsu](https://www.nodejitsu.com/) and
